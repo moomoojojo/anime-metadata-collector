@@ -113,7 +113,9 @@ python3 tests/test_full_pipeline_1_to_3.py
 - ✅ 검색어 전처리 추가
 - ✅ 자막판 우선 정책 구현
 - ✅ MAX_SEARCH_CANDIDATES 20개로 확장
-- 🔄 4단계 노션 업로드 구현 중
+- ✅ 4단계 노션 업로드 구현 완료
+- ✅ GitHub 저장소 연결 및 보안 설정 완료
+- 🎯 **새로운 기능**: Git 변화 추적 및 Cursor 통합 테스트
 
 ---
 

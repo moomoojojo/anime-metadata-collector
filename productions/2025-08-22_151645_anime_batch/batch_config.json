@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_151645_anime_batch",
+  "execution_date": "2025-08-22T15:16:45.129179",
+  "source_csv": "anime.csv",
+  "description": "첫 번째 25개 애니메이션 배치 처리",
+  "notion_database_id": "256670adb05a80d1ac76ebf9741e5628",
+  "openai_model": "gpt-4",
+  "total_items": 24
+}

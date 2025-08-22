@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_151450_anime_test_batch",
+  "execution_date": "2025-08-22T15:14:50.117173",
+  "source_csv": "anime_test.csv",
+  "description": "테스트용 2개 애니메이션",
+  "notion_database_id": "256670adb05a80d1ac76ebf9741e5628",
+  "openai_model": "gpt-4",
+  "total_items": 2
+}
