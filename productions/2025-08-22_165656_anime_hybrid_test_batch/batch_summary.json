@@ -1,0 +1,66 @@
+{
+  "batch_id": "2025-08-22_165656_anime_hybrid_test_batch",
+  "execution_summary": {
+    "total_items": 2,
+    "success_count": 1,
+    "failed_count": 1,
+    "success_rate": "50.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 1,
+    "step3_success": 1,
+    "step4_success": 2
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "장송의 프리렌 1기",
+      "index": 1,
+      "start_time": "2025-08-22T16:56:56.109160",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_165656_anime_hybrid_test_batch/search_results/search_01_장송의 프리렌 1기.json",
+          "candidates_count": 8
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_165656_anime_hybrid_test_batch/llm_results/llm_01_장송의 프리렌 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_165656_anime_hybrid_test_batch/metadata_results/metadata_01_장송의 프리렌 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_165656_anime_hybrid_test_batch/notion_results/notion_01_장송의 프리렌 1기.json",
+          "notion_page_url": "https://www.notion.so/1-253670adb05a80b0aef7d8814f8fe163"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T16:57:06.019241"
+    },
+    {
+      "anime_title": "던전밥",
+      "index": 2,
+      "start_time": "2025-08-22T16:57:06.019280",
+      "steps": {
+        "step1": {
+          "success": false,
+          "file": "productions/2025-08-22_165656_anime_hybrid_test_batch/search_results/search_02_던전밥.json",
+          "candidates_count": 0
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_165656_anime_hybrid_test_batch/notion_results/notion_02_던전밥.json",
+          "notion_page_url": "https://www.notion.so/253670adb05a804f9bc7f7d3c44c42c2"
+        }
+      },
+      "final_status": "step1_failed_but_notion_created",
+      "end_time": "2025-08-22T16:57:08.441565"
+    }
+  ],
+  "execution_time": "2025-08-22T16:57:08.441592"
+}

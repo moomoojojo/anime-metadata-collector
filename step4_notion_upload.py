@@ -49,9 +49,9 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
     # 필수 필드들을 노션 형식으로 변환
     field_mapping = config.NOTION_FIELD_MAPPING
     
-    # 제목 (Title) - 사용자 입력 제목을 노션 제목 칼럼에
-    if "제목" in field_mapping:
-        properties["제목"] = {
+    # 이름 (Title) - 사용자 입력 제목을 노션 제목 칼럼에
+    if "이름" in field_mapping:
+        properties["이름"] = {
             "title": [{"text": {"content": user_input}}]
         }
     
@@ -61,11 +61,11 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
             "rich_text": [{"text": {"content": metadata["name"]}}]
         }
     
-    # 방영분기 (Multi-select)
-    if "방영분기" in field_mapping and metadata and "air_year_quarter" in metadata and metadata["air_year_quarter"]:
+    # 방영 분기 (Multi-select)
+    if "방영 분기" in field_mapping and metadata and "air_year_quarter" in metadata and metadata["air_year_quarter"]:
         # "|"로 구분된 여러 분기를 분리하여 다중 선택으로 처리
         quarters = metadata["air_year_quarter"].split("|")
-        properties["방영분기"] = {
+        properties["방영 분기"] = {
             "multi_select": [{"name": quarter.strip()} for quarter in quarters if quarter.strip()]
         }
     
@@ -75,9 +75,9 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
             "number": metadata["avg_rating"]
         }
     
-    # 상태 (Select)
-    if "상태" in field_mapping and metadata and "status" in metadata:
-        properties["상태"] = {
+    # 방영 상태 (Select)
+    if "방영 상태" in field_mapping and metadata and "status" in metadata:
+        properties["방영 상태"] = {
             "select": {"name": metadata["status"]}
         }
     
@@ -87,9 +87,9 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
             "url": metadata["laftel_url"]
         }
     
-    # 커버 URL (Files & Media)
-    if "커버 URL" in field_mapping and metadata and "cover_url" in metadata:
-        properties["커버 URL"] = {
+    # 표지 (Files & Media)
+    if "표지" in field_mapping and metadata and "cover_url" in metadata:
+        properties["표지"] = {
             "files": [
                 {
                     "type": "external",
@@ -115,8 +115,43 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
     
     return properties
 
+def search_existing_page(user_input: str, headers: Dict[str, str], database_id: str) -> Optional[str]:
+    """노션 데이터베이스에서 기존 페이지 검색"""
+    query_payload = {
+        "filter": {
+            "property": "이름",
+            "title": {
+                "equals": user_input
+            }
+        }
+    }
+    
+    try:
+        response = requests.post(
+            f"https://api.notion.com/v1/databases/{database_id}/query",
+            headers=headers,
+            json=query_payload
+        )
+        
+        if response.status_code == 200:
+            results = response.json().get("results", [])
+            if results:
+                page_id = results[0].get("id")
+                print(f"🔍 기존 페이지 발견: {user_input}")
+                return page_id
+            else:
+                print(f"🆕 새 페이지 생성 필요: {user_input}")
+                return None
+        else:
+            print(f"⚠️ 페이지 검색 실패: {response.status_code}")
+            return None
+            
+    except Exception as e:
+        print(f"⚠️ 페이지 검색 중 오류: {e}")
+        return None
+
 def upload_to_notion(metadata: Dict[str, Any], user_input: str) -> Dict[str, Any]:
-    """노션 데이터베이스에 페이지 생성"""
+    """노션 데이터베이스에 페이지 생성 또는 업데이트 (하이브리드 방식)"""
     notion_token = os.getenv('NOTION_TOKEN')
     database_id = os.getenv('NOTION_DATABASE_ID')
     
@@ -133,31 +168,43 @@ def upload_to_notion(metadata: Dict[str, Any], user_input: str) -> Dict[str, Any
     # 페이지 속성 생성
     properties = create_notion_page_properties(metadata, user_input)
     
-    # 노션 페이지 생성 요청
-    payload = {
-        "parent": {"database_id": database_id},
-        "properties": properties
-    }
+    # 1. 기존 페이지 검색
+    existing_page_id = search_existing_page(user_input, headers, database_id)
     
-    print(f"🚀 노션 페이지 생성 중...")
+    if existing_page_id:
+        # 2-A. 기존 페이지 업데이트
+        payload = {"properties": properties}
+        api_url = f"https://api.notion.com/v1/pages/{existing_page_id}"
+        action = "업데이트"
+        method = "PATCH"
+    else:
+        # 2-B. 새 페이지 생성
+        payload = {
+            "parent": {"database_id": database_id},
+            "properties": properties
+        }
+        api_url = "https://api.notion.com/v1/pages"
+        action = "생성"
+        method = "POST"
+    
+    print(f"🚀 노션 페이지 {action} 중...")
     if metadata and "name" in metadata:
         print(f"📝 제목: {metadata['name']}")
     else:
         print(f"📝 제목: {user_input} (라프텔 정보 없음)")
     
     try:
-        response = requests.post(
-            'https://api.notion.com/v1/pages',
-            headers=headers,
-            json=payload
-        )
+        if method == "POST":
+            response = requests.post(api_url, headers=headers, json=payload)
+        else:
+            response = requests.patch(api_url, headers=headers, json=payload)
         
         if response.status_code == 200:
             page_data = response.json()
             page_id = page_data['id']
             page_url = page_data['url']
             
-            print(f"✅ 노션 페이지 생성 성공!")
+            print(f"✅ 노션 페이지 {action} 성공!")
             print(f"📄 페이지 ID: {page_id}")
             print(f"🔗 페이지 URL: {page_url}")
             
@@ -165,23 +212,26 @@ def upload_to_notion(metadata: Dict[str, Any], user_input: str) -> Dict[str, Any
                 "upload_success": True,
                 "notion_page_id": page_id,
                 "notion_page_url": page_url,
-                "uploaded_fields": properties
+                "uploaded_fields": properties,
+                "action": action
             }
         else:
-            print(f"❌ 노션 페이지 생성 실패:")
+            print(f"❌ 노션 페이지 {action} 실패:")
             print(f"Status Code: {response.status_code}")
             print(f"Response: {response.text}")
             
             return {
                 "upload_success": False,
-                "error": f"HTTP {response.status_code}: {response.text}"
+                "error": f"HTTP {response.status_code}: {response.text}",
+                "action": action
             }
             
     except Exception as e:
         print(f"❌ 노션 API 호출 실패: {e}")
         return {
             "upload_success": False,
-            "error": str(e)
+            "error": str(e),
+            "action": action
         }
 
 def save_notion_results(result_data: Dict[str, Any], user_input: str):

@@ -1,0 +1,22 @@
+{
+  "user_input": "장송의 프리렌 1기",
+  "candidate_titles": [
+    "(자막) 장송의 프리렌",
+    "(더빙) 장송의 프리렌",
+    "(더빙) 드래곤 퀘스트 : 다이의 대모험 part 1",
+    "(더빙) 강철의 연금술사 BROTHERHOOD",
+    "(자막) 페어리 테일 11기",
+    "(자막) 강철의 연금술사 리마스터",
+    "(자막) 드래곤 퀘스트 : 다이의 대모험 part 1",
+    "(더빙) 페어리 테일 1기"
+  ],
+  "llm_timestamp": "2025-08-22T16:57:01.611574",
+  "matching_success": true,
+  "assistant_raw_response": "```json\n{\n  \"status\": \"match_found\",\n  \"selected_title\": \"(자막) 장송의 프리렌\",\n  \"confidence\": 95,\n  \"reason\": \"제목과 시즌 정보가 정확히 일치하며, 자막판을 우선 선택했습니다.\"\n}\n```",
+  "thread_id": "thread_pKtltWY2yJhKZv9l103JGV6r",
+  "run_id": "run_A1DJ84KgDLq0iisDIjhOiNNF",
+  "match_status": "match_found",
+  "selected_title": "(자막) 장송의 프리렌",
+  "confidence": 95,
+  "reason": "제목과 시즌 정보가 정확히 일치하며, 자막판을 우선 선택했습니다."
+}

@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_165956_anime_hybrid_test_batch",
+  "execution_date": "2025-08-22T16:59:56.064918",
+  "source_csv": "anime_hybrid_test.csv",
+  "description": "칼럼명 수정 후 재테스트 - 표지/방영상태/방영분기 확인",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134",
+  "openai_model": "gpt-4",
+  "total_items": 2
+}

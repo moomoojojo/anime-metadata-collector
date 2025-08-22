@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_165431_anime_hybrid_test_batch",
+  "execution_date": "2025-08-22T16:54:31.046092",
+  "source_csv": "anime_hybrid_test.csv",
+  "description": "하이브리드 시스템 3개 애니메이션 테스트 - 기존 페이지 업데이트",
+  "notion_database_id": "254670adb05a801690db000c1b8599af",
+  "openai_model": "gpt-4",
+  "total_items": 2
+}

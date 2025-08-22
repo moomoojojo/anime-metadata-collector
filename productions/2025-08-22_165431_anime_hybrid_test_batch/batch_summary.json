@@ -1,0 +1,66 @@
+{
+  "batch_id": "2025-08-22_165431_anime_hybrid_test_batch",
+  "execution_summary": {
+    "total_items": 2,
+    "success_count": 0,
+    "failed_count": 2,
+    "success_rate": "0.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 1,
+    "step3_success": 1,
+    "step4_success": 0
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "장송의 프리렌 1기",
+      "index": 1,
+      "start_time": "2025-08-22T16:54:31.046523",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_165431_anime_hybrid_test_batch/search_results/search_01_장송의 프리렌 1기.json",
+          "candidates_count": 8
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_165431_anime_hybrid_test_batch/llm_results/llm_01_장송의 프리렌 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_165431_anime_hybrid_test_batch/metadata_results/metadata_01_장송의 프리렌 1기.json"
+        },
+        "step4": {
+          "success": false,
+          "file": "productions/2025-08-22_165431_anime_hybrid_test_batch/notion_results/notion_01_장송의 프리렌 1기.json",
+          "notion_page_url": ""
+        }
+      },
+      "final_status": "step4_failed",
+      "end_time": "2025-08-22T16:54:45.008793"
+    },
+    {
+      "anime_title": "던전밥",
+      "index": 2,
+      "start_time": "2025-08-22T16:54:45.008810",
+      "steps": {
+        "step1": {
+          "success": false,
+          "file": "productions/2025-08-22_165431_anime_hybrid_test_batch/search_results/search_02_던전밥.json",
+          "candidates_count": 0
+        },
+        "step4": {
+          "success": false,
+          "file": "productions/2025-08-22_165431_anime_hybrid_test_batch/notion_results/notion_02_던전밥.json",
+          "notion_page_url": ""
+        }
+      },
+      "final_status": "step1_failed",
+      "end_time": "2025-08-22T16:54:45.828615"
+    }
+  ],
+  "execution_time": "2025-08-22T16:54:45.828633"
+}
