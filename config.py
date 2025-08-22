@@ -27,13 +27,13 @@ NOTION_RESULT_FILE = f"{RESULTS_DIR}/notion_result.json"
 
 # 노션 필드 매핑 (업데이트 버전)
 NOTION_FIELD_MAPPING = {
-    "제목": "user_input",                # 사용자 입력 제목 (Title 칼럼)
+    "이름": "user_input",                # 사용자 입력 제목 (Title 칼럼)
     "라프텔 제목": "name",               # 라프텔에서 매칭된 제목
-    "방영분기": "air_year_quarter", 
+    "방영 분기": "air_year_quarter", 
     "라프텔 평점": "avg_rating",
-    "상태": "status",
+    "방영 상태": "status",
     "라프텔 URL": "laftel_url",
-    "커버 URL": "cover_url",
+    "표지": "cover_url",
     "제작사": "production",               # Select 타입
     "총 화수": "total_episodes"
 }
