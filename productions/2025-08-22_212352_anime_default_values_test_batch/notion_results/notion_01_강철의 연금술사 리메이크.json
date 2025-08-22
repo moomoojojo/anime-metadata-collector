@@ -1,0 +1,81 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-81fa-832b-e21ca9f9bc32",
+  "notion_page_url": "https://www.notion.so/257670adb05a81fa832be21ca9f9bc32",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "강철의 연금술사 리메이크"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "(자막) 강철의 연금술사 리마스터"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2003년"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41610"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/1b5bd783-a593-45b4-bab3-1c496d4883d2.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "본즈"
+      }
+    },
+    "총 화수": {
+      "number": 50
+    },
+    "상태": {
+      "status": {
+        "name": "관심 있음"
+      }
+    },
+    "분류": {
+      "select": {
+        "name": "애니메이션"
+      }
+    },
+    "시도 횟수": {
+      "number": 0
+    },
+    "완료 횟수": {
+      "number": 0
+    }
+  },
+  "action": "생성",
+  "upload_timestamp": "2025-08-22T21:24:01.762613",
+  "user_input": "강철의 연금술사 리메이크"
+}

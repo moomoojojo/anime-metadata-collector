@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_171928_anime_bangrangbab_test_batch",
+  "execution_date": "2025-08-22T17:19:28.035271",
+  "source_csv": "anime_bangrangbab_test.csv",
+  "description": "방랑밥 분류 필터 테스트 - 올바른 애니메이션 페이지 찾기",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134",
+  "openai_model": "gpt-4",
+  "total_items": 1
+}

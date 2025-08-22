@@ -42,7 +42,7 @@ def load_metadata_results() -> Optional[Dict[str, Any]]:
         print(f"❌ 메타데이터 파일 로드 실패: {e}")
         return None
 
-def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> Dict[str, Any]:
+def create_notion_page_properties(metadata: Dict[str, Any], user_input: str, is_new_page: bool = False) -> Dict[str, Any]:
     """메타데이터를 노션 페이지 속성으로 변환"""
     properties = {}
     
@@ -113,6 +113,27 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
             "number": metadata["total_episodes"]
         }
     
+    # 신규 페이지 생성 시 기본값 설정
+    if is_new_page:
+        default_values = config.NOTION_DEFAULT_VALUES
+        for field_name, field_config in default_values.items():
+            if field_name not in properties:  # 기존 값이 없을 때만 기본값 설정
+                field_type = field_config["type"]
+                field_value = field_config["value"]
+                
+                if field_type == "status":
+                    properties[field_name] = {
+                        "status": {"name": field_value}
+                    }
+                elif field_type == "select":
+                    properties[field_name] = {
+                        "select": {"name": field_value}
+                    }
+                elif field_type == "number":
+                    properties[field_name] = {
+                        "number": field_value
+                    }
+    
     return properties
 
 def search_existing_page(user_input: str, headers: Dict[str, str], database_id: str) -> Optional[str]:
@@ -175,11 +196,12 @@ def upload_to_notion(metadata: Dict[str, Any], user_input: str) -> Dict[str, Any
         'Notion-Version': '2022-06-28'
     }
     
-    # 페이지 속성 생성
-    properties = create_notion_page_properties(metadata, user_input)
-    
     # 1. 기존 페이지 검색
     existing_page_id = search_existing_page(user_input, headers, database_id)
+    
+    # 페이지 속성 생성 (신규/업데이트 구분)
+    is_new_page = existing_page_id is None
+    properties = create_notion_page_properties(metadata, user_input, is_new_page)
     
     if existing_page_id:
         # 2-A. 기존 페이지 업데이트

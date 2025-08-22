@@ -37,3 +37,11 @@ NOTION_FIELD_MAPPING = {
     "제작사": "production",               # Select 타입
     "총 화수": "total_episodes"
 }
+
+# 신규 페이지 생성 시 기본값 설정
+NOTION_DEFAULT_VALUES = {
+    "상태": {"type": "status", "value": "관심 있음"},
+    "분류": {"type": "select", "value": "애니메이션"},
+    "시도 횟수": {"type": "number", "value": 0},
+    "완료 횟수": {"type": "number", "value": 0}
+}

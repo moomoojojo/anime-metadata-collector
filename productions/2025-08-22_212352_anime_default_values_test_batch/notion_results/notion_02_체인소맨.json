@@ -1,0 +1,81 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-810e-b38d-e9ef74abd94c",
+  "notion_page_url": "https://www.notion.so/257670adb05a810eb38de9ef74abd94c",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "체인소맨"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "체인소 맨"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2022년 4분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.6
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41105"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/d784408b-2ec6-4d1c-b526-c8209837972f.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "MAPPA"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    },
+    "상태": {
+      "status": {
+        "name": "관심 있음"
+      }
+    },
+    "분류": {
+      "select": {
+        "name": "애니메이션"
+      }
+    },
+    "시도 횟수": {
+      "number": 0
+    },
+    "완료 횟수": {
+      "number": 0
+    }
+  },
+  "action": "생성",
+  "upload_timestamp": "2025-08-22T21:24:08.904333",
+  "user_input": "체인소맨"
+}
