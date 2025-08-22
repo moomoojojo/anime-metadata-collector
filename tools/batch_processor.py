@@ -25,6 +25,7 @@ import step2_llm_matching
 import step3_metadata_collection
 import step4_notion_upload
 import config
+import laftel
 
 class BatchProcessor:
     def __init__(self, csv_file: str, description: str = "", notion_db_id: str = None):
@@ -93,6 +94,156 @@ class BatchProcessor:
             json.dump(config_data, f, ensure_ascii=False, indent=2)
         
         print(f"✅ 환경 설정 완료")
+    
+    def collect_metadata_for_batch(self, llm_result: Dict[str, Any], user_input: str) -> Dict[str, Any]:
+        """배치 처리용 메타데이터 수집 함수 (개별 LLM 결과 사용)"""
+        try:
+            # 매칭 상태 확인
+            match_status = llm_result.get("match_status")
+            if match_status != "match_found":
+                print(f"⏭️ 3단계 건너뛰기: 2단계에서 매칭되지 않음")
+                print(f"   매칭 상태: {match_status}")
+                print(f"   이유: {llm_result.get('reason', '알 수 없음')}")
+                
+                return {
+                    "metadata_success": False,
+                    "skip_reason": "2단계에서 매칭되지 않음",
+                    "llm_status": match_status,
+                    "llm_reason": llm_result.get("reason", ""),
+                    "user_input": user_input,
+                    "timestamp": datetime.now().isoformat()
+                }
+            
+            # 매칭 성공한 경우 메타데이터 수집
+            selected_title = llm_result["selected_title"]
+            confidence = llm_result.get("confidence", 0)
+            
+            print(f"✅ 2단계 매칭 성공 확인")
+            print(f"   원본 입력: {user_input}")
+            print(f"   선택된 제목: {selected_title}")
+            print(f"   신뢰도: {confidence}%")
+            
+            # 애니메이션 ID 찾기
+            anime_id = self.find_anime_id_by_title(selected_title, user_input)
+            if not anime_id:
+                return {
+                    "metadata_success": False,
+                    "error": "애니메이션 ID를 찾을 수 없음",
+                    "selected_title": selected_title,
+                    "user_input": user_input,
+                    "timestamp": datetime.now().isoformat()
+                }
+            
+            # 상세 메타데이터 수집
+            metadata = self.fetch_detailed_metadata(anime_id)
+            if not metadata:
+                return {
+                    "metadata_success": False,
+                    "error": "메타데이터 수집 실패",
+                    "anime_id": anime_id,
+                    "selected_title": selected_title,
+                    "user_input": user_input,
+                    "timestamp": datetime.now().isoformat()
+                }
+            
+            # 결과 구성
+            result = {
+                "metadata_success": True,
+                "user_input": user_input,
+                "selected_title": selected_title,
+                "anime_id": anime_id,
+                "confidence": confidence,
+                "metadata": metadata,
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            return result
+            
+        except Exception as e:
+            print(f"❌ 메타데이터 수집 중 오류: {e}")
+            return {
+                "metadata_success": False,
+                "error": str(e),
+                "user_input": user_input,
+                "timestamp": datetime.now().isoformat()
+            }
+    
+    def find_anime_id_by_title(self, selected_title: str, user_input: str) -> int:
+        """선택된 제목으로 애니메이션 ID 찾기"""
+        try:
+            print(f"🔍 애니메이션 ID 검색 중...")
+            print(f"   선택된 제목: {selected_title}")
+            
+            # 선택된 제목으로 다시 검색해서 정확한 ID 찾기
+            search_results = laftel.sync.searchAnime(selected_title)
+            
+            if not search_results:
+                print(f"❌ '{selected_title}'로 검색 결과가 없습니다.")
+                return None
+            
+            # 정확히 일치하는 제목 찾기
+            for result in search_results:
+                if result.name == selected_title:
+                    print(f"✅ 정확한 매칭 발견: ID {result.id}")
+                    return result.id
+            
+            # 정확한 매칭이 없으면 첫 번째 결과 사용
+            first_result = search_results[0]
+            print(f"⚠️ 정확한 매칭 없음, 첫 번째 결과 사용: ID {first_result.id}")
+            print(f"   첫 번째 결과: {first_result.name}")
+            
+            return first_result.id
+            
+        except Exception as e:
+            print(f"❌ ID 검색 중 오류: {e}")
+            return None
+    
+    def fetch_detailed_metadata(self, anime_id: int) -> Dict[str, Any]:
+        """애니메이션 ID로 상세 메타데이터 수집"""
+        try:
+            print(f"📊 상세 정보 수집 중... (ID: {anime_id})")
+            
+            # 애니메이션 상세 정보
+            info = laftel.sync.getAnimeInfo(anime_id)
+            print(f"✅ 기본 정보 수집 완료: {info.name}")
+            
+            # 에피소드 정보로 총 화수 계산
+            print(f"🎬 에피소드 정보 조회 중...")
+            try:
+                episodes = laftel.sync.searchEpisodes(anime_id)
+                total_episodes = len(episodes) if episodes else 0
+                print(f"📺 총 {total_episodes}화 확인")
+            except Exception as ep_error:
+                print(f"⚠️ 에피소드 정보 조회 실패: {ep_error}")
+                total_episodes = 0
+            
+            # 상태 판정
+            status = "완결" if getattr(info, "ended", False) else "방영중"
+            
+            metadata = {
+                "name": info.name or "",
+                "air_year_quarter": info.air_year_quarter or "",
+                "avg_rating": info.avg_rating or 0.0,
+                "status": status,
+                "laftel_url": info.url or "",
+                "cover_url": info.image or "",
+                "production": info.production if info.production is not None else "",
+                "total_episodes": total_episodes
+            }
+            
+            print(f"✅ 메타데이터 수집 완료!")
+            print(f"   제목: {metadata['name']}")
+            print(f"   방영분기: {metadata['air_year_quarter']}")
+            print(f"   평점: {metadata['avg_rating']}")
+            print(f"   상태: {metadata['status']}")
+            print(f"   제작사: {metadata['production']}")
+            print(f"   총 화수: {metadata['total_episodes']}화")
+            
+            return metadata
+            
+        except Exception as e:
+            print(f"❌ 메타데이터 수집 실패: {e}")
+            return {}
     
     def load_anime_list(self):
         """CSV에서 애니메이션 목록 로드"""
@@ -182,33 +333,24 @@ class BatchProcessor:
             # Step 3: 메타데이터 수집
             print(f"\n📊 Step 3: 메타데이터 수집")
             
-            # 임시로 결과 파일 경로 변경
-            original_llm_file = config.LLM_CHOICE_FILE
-            config.LLM_CHOICE_FILE = llm_file
+            metadata_result = self.collect_metadata_for_batch(llm_result, anime_title)
             
-            try:
-                metadata_result = step3_metadata_collection.collect_metadata()
-                
-                # 결과 저장
-                metadata_file = os.path.join(self.metadata_dir, f"metadata_{index+1:02d}_{anime_title.replace('/', '_')}.json")
-                with open(metadata_file, 'w', encoding='utf-8') as f:
-                    json.dump(metadata_result, f, ensure_ascii=False, indent=2)
-                
-                result["steps"]["step3"] = {
-                    "success": metadata_result.get("metadata_success", False),
-                    "file": metadata_file
-                }
-                
-                if not metadata_result.get("metadata_success"):
-                    print(f"❌ Step 3 실패: 메타데이터 수집 실패")
-                    result["final_status"] = "step3_failed"
-                    return result
-                
-                self.results["step_stats"]["step3_success"] += 1
-                
-            finally:
-                # 경로 복원
-                config.LLM_CHOICE_FILE = original_llm_file
+            # 결과 저장
+            metadata_file = os.path.join(self.metadata_dir, f"metadata_{index+1:02d}_{anime_title.replace('/', '_')}.json")
+            with open(metadata_file, 'w', encoding='utf-8') as f:
+                json.dump(metadata_result, f, ensure_ascii=False, indent=2)
+            
+            result["steps"]["step3"] = {
+                "success": metadata_result.get("metadata_success", False),
+                "file": metadata_file
+            }
+            
+            if not metadata_result.get("metadata_success"):
+                print(f"❌ Step 3 실패: 메타데이터 수집 실패")
+                result["final_status"] = "step3_failed"
+                return result
+            
+            self.results["step_stats"]["step3_success"] += 1
             
             # Step 4: 노션 업로드
             print(f"\n📝 Step 4: 노션 업로드")

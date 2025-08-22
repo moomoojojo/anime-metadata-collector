@@ -1,0 +1,103 @@
+{
+  "batch_id": "2025-08-22_152100_anime_test3_batch",
+  "execution_summary": {
+    "total_items": 3,
+    "success_count": 3,
+    "failed_count": 0,
+    "success_rate": "100.0%"
+  },
+  "step_statistics": {
+    "step1_success": 3,
+    "step2_success": 3,
+    "step3_success": 3,
+    "step4_success": 3
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "장송의 프리렌 1기",
+      "index": 1,
+      "start_time": "2025-08-22T15:21:00.194827",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/search_results/search_01_장송의 프리렌 1기.json",
+          "candidates_count": 8
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/llm_results/llm_01_장송의 프리렌 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/metadata_results/metadata_01_장송의 프리렌 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/notion_results/notion_01_장송의 프리렌 1기.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a814c88cacce5d54ba140"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:21:07.771241"
+    },
+    {
+      "anime_title": "최애의 아이",
+      "index": 2,
+      "start_time": "2025-08-22T15:21:07.771290",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/search_results/search_02_최애의 아이.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/llm_results/llm_02_최애의 아이.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/metadata_results/metadata_02_최애의 아이.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/notion_results/notion_02_최애의 아이.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a811a81cccf430df5d4f6"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:21:29.268748"
+    },
+    {
+      "anime_title": "트라이건 스탬피드",
+      "index": 3,
+      "start_time": "2025-08-22T15:21:29.268801",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/search_results/search_03_트라이건 스탬피드.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/llm_results/llm_03_트라이건 스탬피드.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/metadata_results/metadata_03_트라이건 스탬피드.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152100_anime_test3_batch/notion_results/notion_03_트라이건 스탬피드.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81d6997ec7194d3880e6"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:21:38.139817"
+    }
+  ],
+  "execution_time": "2025-08-22T15:21:38.139832"
+}

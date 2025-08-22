@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-81d6-997e-c7194d3880e6",
+  "notion_page_url": "https://www.notion.so/257670adb05a81d6997ec7194d3880e6",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "트라이건 스탬피드"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "트라이건 스탬피드"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.7
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41221"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/89e23489-d34a-467c-be42-053fc9a8a83d.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "오렌지"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:21:38.139467",
+  "user_input": "트라이건 스탬피드"
+}
