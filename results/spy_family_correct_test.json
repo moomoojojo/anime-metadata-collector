@@ -1,0 +1,47 @@
+{
+  "original_input": "스파이 패밀리 1기",
+  "search_term": "스파이 패밀리",
+  "search_results": {
+    "user_input": "스파이 패밀리",
+    "search_timestamp": "2025-08-22T11:00:32.697988",
+    "total_results": 20,
+    "collected_candidates": 10,
+    "candidate_titles": [
+      "(자막) 극장판 스파이 패밀리 코드 : 화이트",
+      "(더빙) 극장판 스파이 패밀리 코드 : 화이트",
+      "(더빙) SPY×FAMILY part 1",
+      "스파이 교실 part 2",
+      "(더빙) SPY×FAMILY Season 2",
+      "스파이 교실 part 1",
+      "(더빙) 스파이즈",
+      "(더빙) SPY×FAMILY part 2",
+      "(자막) SPY×FAMILY part 2",
+      "(자막) 스파이즈"
+    ],
+    "search_success": true
+  },
+  "llm_results": {
+    "user_input": "스파이 패밀리 1기",
+    "candidate_titles": [
+      "(자막) 극장판 스파이 패밀리 코드 : 화이트",
+      "(더빙) 극장판 스파이 패밀리 코드 : 화이트",
+      "(더빙) SPY×FAMILY part 1",
+      "스파이 교실 part 2",
+      "(더빙) SPY×FAMILY Season 2",
+      "스파이 교실 part 1",
+      "(더빙) 스파이즈",
+      "(더빙) SPY×FAMILY part 2",
+      "(자막) SPY×FAMILY part 2",
+      "(자막) 스파이즈"
+    ],
+    "llm_timestamp": "2025-08-22T11:00:38.307897",
+    "matching_success": true,
+    "assistant_raw_response": "```json\n{\n  \"status\": \"match_found\",\n  \"selected_title\": \"(더빙) SPY×FAMILY part 1\",\n  \"confidence\": 90,\n  \"reason\": \"사용자 입력 '스파이 패밀리 1기'와 제목의 핵심 키워드, 시즌(1기=part 1), 본편 시리즈 정보가 정확히 일치합니다.\"\n}\n```",
+    "thread_id": "thread_FYNGz3JqEt7IDHctXGJBc0t2",
+    "run_id": "run_uqxHG5ohGQMEYs0uSB3V1QeS",
+    "match_status": "match_found",
+    "selected_title": "(더빙) SPY×FAMILY part 1",
+    "confidence": 90,
+    "reason": "사용자 입력 '스파이 패밀리 1기'와 제목의 핵심 키워드, 시즌(1기=part 1), 본편 시리즈 정보가 정확히 일치합니다."
+  }
+}

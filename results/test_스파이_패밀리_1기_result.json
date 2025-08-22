@@ -1,0 +1,46 @@
+{
+  "test_case": "스파이 패밀리 1기",
+  "search_results": {
+    "user_input": "스파이 패밀리 1기",
+    "search_timestamp": "2025-08-22T10:57:25.289573",
+    "total_results": 20,
+    "collected_candidates": 10,
+    "candidate_titles": [
+      "(자막) 극장판 스파이 패밀리 코드 : 화이트",
+      "(더빙) 극장판 스파이 패밀리 코드 : 화이트",
+      "스파이 교실 part 2",
+      "스파이 교실 part 1",
+      "(더빙) 스파이즈",
+      "(자막) 스파이즈",
+      "실바니안 패밀리 미니에피소드 시즌 2 -아이비- 영어",
+      "베스트 베리 패밀리 키즈송",
+      "극장판 짱구는 못말려 19기 : 태풍을 부르는 황금 스파이 대작전",
+      "(더빙) 극장판 실바니안 패밀리: 프레야의 선물"
+    ],
+    "search_success": true
+  },
+  "llm_results": {
+    "user_input": "스파이 패밀리 1기",
+    "candidate_titles": [
+      "(자막) 극장판 스파이 패밀리 코드 : 화이트",
+      "(더빙) 극장판 스파이 패밀리 코드 : 화이트",
+      "스파이 교실 part 2",
+      "스파이 교실 part 1",
+      "(더빙) 스파이즈",
+      "(자막) 스파이즈",
+      "실바니안 패밀리 미니에피소드 시즌 2 -아이비- 영어",
+      "베스트 베리 패밀리 키즈송",
+      "극장판 짱구는 못말려 19기 : 태풍을 부르는 황금 스파이 대작전",
+      "(더빙) 극장판 실바니안 패밀리: 프레야의 선물"
+    ],
+    "llm_timestamp": "2025-08-22T10:57:31.044246",
+    "matching_success": true,
+    "assistant_raw_response": "```json\n{\n  \"status\": \"no_match\",\n  \"selected_title\": null,\n  \"confidence\": 0,\n  \"reason\": \"'스파이 패밀리 1기'에 해당하는 TV 시리즈 본편 제목이 후보에 없습니다. 후보에는 오직 극장판(스파이 패밀리 코드 : 화이트) 또는 완전히 다른 작품만 존재합니다.\"\n}\n```",
+    "thread_id": "thread_d40JFCiQ8h43iqoV00iVHl3P",
+    "run_id": "run_zIGCfi4nr7Z2C7uB2jFStgyz",
+    "match_status": "no_match",
+    "selected_title": null,
+    "confidence": 0,
+    "reason": "'스파이 패밀리 1기'에 해당하는 TV 시리즈 본편 제목이 후보에 없습니다. 후보에는 오직 극장판(스파이 패밀리 코드 : 화이트) 또는 완전히 다른 작품만 존재합니다."
+  }
+}
