@@ -1,9 +1,0 @@
-{
-  "batch_id": "2025-08-22_170917_anime_final_batch_batch",
-  "execution_date": "2025-08-22T17:09:17.715138",
-  "source_csv": "anime_final_batch.csv",
-  "description": "실제 데이터베이스 24개 애니메이션 최종 배치 처리 - 하이브리드 시스템",
-  "notion_database_id": "55e733b8773a42c2b329345099c52134",
-  "openai_model": "gpt-4",
-  "total_items": 24
-}

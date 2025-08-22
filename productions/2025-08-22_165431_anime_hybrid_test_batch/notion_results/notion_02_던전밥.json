@@ -1,7 +1,0 @@
-{
-  "upload_success": false,
-  "error": "HTTP 404: {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: 254670ad-b05a-8016-90db-000c1b8599af. Make sure the relevant pages and databases are shared with your integration.\",\"request_id\":\"e7a086d8-e7cc-4c01-835f-e6706a0f27e2\"}",
-  "action": "생성",
-  "upload_timestamp": "2025-08-22T16:54:45.828308",
-  "user_input": "던전밥"
-}

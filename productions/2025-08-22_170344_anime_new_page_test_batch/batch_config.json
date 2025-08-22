@@ -1,9 +1,0 @@
-{
-  "batch_id": "2025-08-22_170344_anime_new_page_test_batch",
-  "execution_date": "2025-08-22T17:03:44.422567",
-  "source_csv": "anime_new_page_test.csv",
-  "description": "신규 페이지 생성 테스트 - 그 비스크 돌은 사랑을 한다 2기",
-  "notion_database_id": "55e733b8773a42c2b329345099c52134",
-  "openai_model": "gpt-4",
-  "total_items": 1
-}

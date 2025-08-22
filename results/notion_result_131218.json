@@ -1,6 +1,0 @@
-{
-  "upload_success": false,
-  "error": "HTTP 400: {\"object\":\"error\",\"status\":400,\"code\":\"validation_error\",\"message\":\"방영분기 is not a property that exists. 상태 is expected to be select.\",\"request_id\":\"ec0686f9-f911-4091-aa0d-7737074cc270\"}",
-  "upload_timestamp": "2025-08-22 13:12:18",
-  "user_input": "무직전생 ~이세계에 갔으면 최선을 다한다~ 1기"
-}

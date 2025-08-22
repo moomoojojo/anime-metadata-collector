@@ -1,0 +1,21 @@
+# 개발 도구 의존성
+# 프로덕션에는 불필요한 개발/테스트 전용 패키지들
+
+# 코드 품질 도구
+black>=23.0.0                   # 코드 포매터
+ruff>=0.1.0                     # 빠른 린터 (flake8, isort 대체)
+mypy>=1.0.0                     # 타입 체커
+
+# 테스트 도구
+pytest>=7.0.0                  # 테스트 프레임워크
+pytest-cov>=4.0.0              # 테스트 커버리지
+pytest-mock>=3.10.0            # 모킹 도구
+
+# 개발 편의 도구
+ipython>=8.0.0                 # 향상된 REPL
+jupyter>=1.0.0                 # 노트북 환경
+pre-commit>=3.0.0              # Git hooks
+
+# 문서화
+mkdocs>=1.5.0                  # 문서 생성 (선택사항)
+mkdocs-material>=9.0.0         # Material 테마 (선택사항)

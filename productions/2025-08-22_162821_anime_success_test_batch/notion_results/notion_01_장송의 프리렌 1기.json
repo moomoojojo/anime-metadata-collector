@@ -1,6 +1,0 @@
-{
-  "upload_success": false,
-  "error": "HTTP 400: {\"object\":\"error\",\"status\":400,\"code\":\"validation_error\",\"message\":\"방영분기 is expected to be rich_text.\",\"request_id\":\"b8ecd5fd-e1ab-4a6f-8f89-a677a933da3e\"}",
-  "upload_timestamp": "2025-08-22T16:28:41.235544",
-  "user_input": "장송의 프리렌 1기"
-}

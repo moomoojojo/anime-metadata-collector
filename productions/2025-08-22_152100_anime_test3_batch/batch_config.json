@@ -1,9 +1,0 @@
-{
-  "batch_id": "2025-08-22_152100_anime_test3_batch",
-  "execution_date": "2025-08-22T15:21:00.194384",
-  "source_csv": "anime_test3.csv",
-  "description": "수정된 코드 테스트 - 3개 애니메이션",
-  "notion_database_id": "256670adb05a80d1ac76ebf9741e5628",
-  "openai_model": "gpt-4",
-  "total_items": 3
-}

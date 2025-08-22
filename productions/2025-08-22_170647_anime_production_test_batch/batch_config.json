@@ -1,9 +1,0 @@
-{
-  "batch_id": "2025-08-22_170647_anime_production_test_batch",
-  "execution_date": "2025-08-22T17:06:47.810346",
-  "source_csv": "anime_production_test.csv",
-  "description": "제작사 필드 수정 재테스트 - 안전한 처리",
-  "notion_database_id": "55e733b8773a42c2b329345099c52134",
-  "openai_model": "gpt-4",
-  "total_items": 1
-}

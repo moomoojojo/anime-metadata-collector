@@ -1,6 +1,0 @@
-{
-  "upload_success": false,
-  "error": "HTTP 400: {\"object\":\"error\",\"status\":400,\"code\":\"validation_error\",\"message\":\"body failed validation. Fix one:\\nbody.properties.제작사.select.id should be defined, instead was `undefined`.\\nbody.properties.제작사.select.name should be populated, instead was `\\\"\\\"`.\",\"request_id\":\"d350f8e7-d90d-476a-af8d-9fe163b83766\"}",
-  "upload_timestamp": "2025-08-22 13:06:18",
-  "user_input": "무직전생 ~이세계에 갔으면 최선을 다한다~ 1기"
-}
