@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "1da670ad-b05a-8027-920c-e929e7e4be32",
+  "notion_page_url": "https://www.notion.so/1da670adb05a8027920ce929e7e4be32",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "도망을 잘 치는 도련님"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "도망을 잘 치는 도련님"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2024년 3분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.7
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/42294"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/1252e78d-6cb4-4ff4-8e84-dcfe8c3e6f15.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "CloverWorks"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:10:42.014324",
+  "user_input": "도망을 잘 치는 도련님"
+}

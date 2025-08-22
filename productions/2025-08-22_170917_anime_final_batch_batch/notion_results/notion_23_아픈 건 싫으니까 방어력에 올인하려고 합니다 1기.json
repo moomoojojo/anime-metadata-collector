@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "0da8857b-596f-430a-aaa8-40ab3530ff53",
+  "notion_page_url": "https://www.notion.so/1-0da8857b596f430aaaa840ab3530ff53",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "아픈 건 싫으니까 방어력에 올인하려고 합니다 1기"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "아픈 건 싫으니까 방어력에 올인하려고 합니다 1기"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2020년 1분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.4
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/39648"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/0701506d-702e-41f3-bcaa-ed0b34aed6bd.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "실버 링크"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:12:31.346599",
+  "user_input": "아픈 건 싫으니까 방어력에 올인하려고 합니다 1기"
+}

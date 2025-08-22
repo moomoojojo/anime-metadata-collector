@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "610ece15-6b13-42f5-99f9-e56d005b6834",
+  "notion_page_url": "https://www.notion.so/610ece156b1342f599f9e56d005b6834",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "트라이건 스탬피드"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "트라이건 스탬피드"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2023년 1분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.7
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41221"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/89e23489-d34a-467c-be42-053fc9a8a83d.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "오렌지"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:10:18.851240",
+  "user_input": "트라이건 스탬피드"
+}

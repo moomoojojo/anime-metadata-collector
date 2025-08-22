@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "0b0055cb-ea89-476d-8fe9-be587eeb63a8",
+  "notion_page_url": "https://www.notion.so/0b0055cbea89476d8fe9be587eeb63a8",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "토모 짱은 여자아이!"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "토모 짱은 여자아이!"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2023년 1분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.4
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41220"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/70307067-5676-40b8-b9aa-bd78fb048fce.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "Lay-duce"
+      }
+    },
+    "총 화수": {
+      "number": 13
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:11:24.721386",
+  "user_input": "토모 짱은 여자아이!"
+}

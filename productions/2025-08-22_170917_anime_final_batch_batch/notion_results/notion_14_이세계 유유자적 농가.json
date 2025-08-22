@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "ba29eb7f-78b1-4c01-9e2f-013fa70348e8",
+  "notion_page_url": "https://www.notion.so/ba29eb7f78b14c019e2f013fa70348e8",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "이세계 유유자적 농가"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "이세계 유유자적 농가"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2023년 1분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.4
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41198"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/377290f1-f40d-415f-8d69-310400135e2b.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "Zero-G"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:11:16.137538",
+  "user_input": "이세계 유유자적 농가"
+}

@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "253670ad-b05a-80f3-ba25-c9def59e1790",
+  "notion_page_url": "https://www.notion.so/2-14-253670adb05a80f3ba25c9def59e1790",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "명탐정 코난 극장판 2기: 14번째의 표적"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "(더빙) 극장판 명탐정 코난 2기: 열네번째 표적"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "1998년 2분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.2
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/16920"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/f49c0f9d-f561-43f8-84c7-f253aeff9e94.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "TMS 엔터테인먼트"
+      }
+    },
+    "총 화수": {
+      "number": 1
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:12:39.576008",
+  "user_input": "명탐정 코난 극장판 2기: 14번째의 표적"
+}

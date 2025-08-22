@@ -1,0 +1,68 @@
+{
+  "upload_success": true,
+  "notion_page_id": "df77c689-fce2-445c-841c-4ca3bb228d9f",
+  "notion_page_url": "https://www.notion.so/df77c689fce2445c841c4ca3bb228d9f",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "마법소녀 마도카 마기카"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "마법소녀 마도카 마기카 - 판권 부활"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2011년 1분기"
+        },
+        {
+          "name": "2022년 3분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/40977"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/a8749066-b729-4c30-9bdb-3a137fec8ddc.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "샤프트"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:12:08.677302",
+  "user_input": "마법소녀 마도카 마기카"
+}

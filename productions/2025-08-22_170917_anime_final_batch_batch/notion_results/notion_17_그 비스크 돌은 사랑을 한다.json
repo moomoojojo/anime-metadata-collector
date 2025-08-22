@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "24b670ad-b05a-80e0-aa5d-f3abc1dc15e6",
+  "notion_page_url": "https://www.notion.so/24b670adb05a80e0aa5df3abc1dc15e6",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "그 비스크 돌은 사랑을 한다"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "그 비스크 돌은 사랑을 한다"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2022년 1분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/40655"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/32bab2bd-2db8-46bb-83a8-c84d053434cf.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "CloverWorks"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:11:43.797453",
+  "user_input": "그 비스크 돌은 사랑을 한다"
+}

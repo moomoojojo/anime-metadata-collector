@@ -1,0 +1,60 @@
+{
+  "upload_success": true,
+  "notion_page_id": "1da670ad-b05a-8069-8047-dfeabcd5ee0f",
+  "notion_page_url": "https://www.notion.so/1da670adb05a80698047dfeabcd5ee0f",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "라자로"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "LAZARUS 라자로"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2025년 2분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.2
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/42769"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/7aead226-aea4-409c-87b4-43789919b6b1.jpg"
+          }
+        }
+      ]
+    },
+    "총 화수": {
+      "number": 13
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:10:28.090808",
+  "user_input": "라자로"
+}

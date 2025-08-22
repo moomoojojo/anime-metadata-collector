@@ -1,0 +1,68 @@
+{
+  "upload_success": true,
+  "notion_page_id": "254670ad-b05a-8029-a7d7-e709235325e9",
+  "notion_page_url": "https://www.notion.so/254670adb05a8029a7d7e709235325e9",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "스크라이드"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "스크라이드"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2001년 3분기"
+        },
+        {
+          "name": "2001년 4분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 3.7
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/14351"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/8ccd3a9e-ec5f-408c-a6dd-de3f4cc6dab4.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "선라이즈"
+      }
+    },
+    "총 화수": {
+      "number": 0
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:09:36.079458",
+  "user_input": "스크라이드"
+}

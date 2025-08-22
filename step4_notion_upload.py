@@ -116,13 +116,23 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
     return properties
 
 def search_existing_page(user_input: str, headers: Dict[str, str], database_id: str) -> Optional[str]:
-    """노션 데이터베이스에서 기존 페이지 검색"""
+    """노션 데이터베이스에서 기존 애니메이션 페이지 검색"""
     query_payload = {
         "filter": {
-            "property": "이름",
-            "title": {
-                "equals": user_input
-            }
+            "and": [
+                {
+                    "property": "이름",
+                    "title": {
+                        "equals": user_input
+                    }
+                },
+                {
+                    "property": "분류",
+                    "select": {
+                        "equals": "애니메이션"
+                    }
+                }
+            ]
         }
     }
     

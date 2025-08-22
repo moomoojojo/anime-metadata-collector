@@ -1,0 +1,65 @@
+{
+  "upload_success": true,
+  "notion_page_id": "9d0dd8e3-af54-47fa-a2ed-90c8df73e1d6",
+  "notion_page_url": "https://www.notion.so/1-9d0dd8e3af5447faa2ed90c8df73e1d6",
+  "uploaded_fields": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "스파이 패밀리 1기"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "(자막) SPY×FAMILY part 1"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2022년 2분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "방영 상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/40815"
+    },
+    "표지": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/3a2a7106-1add-45c9-bb46-3fb89ca95dcb.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "WIT STUDIO"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "action": "업데이트",
+  "upload_timestamp": "2025-08-22T17:11:58.055236",
+  "user_input": "스파이 패밀리 1기"
+}

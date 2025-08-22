@@ -1,0 +1,27 @@
+{
+  "user_input": "스크라이드",
+  "candidate_titles": [
+    "(무삭제) 미스터 로봇",
+    "최강왕 도감 ~The Ultimate Battles~",
+    "TRIBE NINE",
+    "근육맨: 완벽초인시조 편",
+    "(자막) 윈브레 -WINBRE-",
+    "SSSS.GRIDMAN",
+    "(더빙) 무적코털 보보보 시즌 1",
+    "LAZARUS 라자로",
+    "출동! 119구조대 구국의 오렌지",
+    "겟타로보 아크",
+    "극장판 스크라이드 얼터레이션 II: Quan",
+    "극장판 스크라이드 얼터레이션 I: TAO",
+    "스크라이드"
+  ],
+  "llm_timestamp": "2025-08-22T17:09:33.075400",
+  "matching_success": true,
+  "assistant_raw_response": "```json\n{\n  \"status\": \"match_found\",\n  \"selected_title\": \"스크라이드\",\n  \"confidence\": 95,\n  \"reason\": \"사용자 입력 '스크라이드'와 후보 '스크라이드'가 제목이 정확히 일치합니다. 시즌, 파트 정보가 없으므로 가장 기본이 되는 본편 시리즈를 우선 선택합니다.\"\n}\n```",
+  "thread_id": "thread_5Rxl8g3Kim5KgWjAos7xqsUO",
+  "run_id": "run_ZvZ1ll95gt0WGJCLHXEd84c8",
+  "match_status": "match_found",
+  "selected_title": "스크라이드",
+  "confidence": 95,
+  "reason": "사용자 입력 '스크라이드'와 후보 '스크라이드'가 제목이 정확히 일치합니다. 시즌, 파트 정보가 없으므로 가장 기본이 되는 본편 시리즈를 우선 선택합니다."
+}

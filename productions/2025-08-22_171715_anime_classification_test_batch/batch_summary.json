@@ -1,0 +1,47 @@
+{
+  "batch_id": "2025-08-22_171715_anime_classification_test_batch",
+  "execution_summary": {
+    "total_items": 1,
+    "success_count": 1,
+    "failed_count": 0,
+    "success_rate": "100.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 1,
+    "step3_success": 1,
+    "step4_success": 1
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "최애의 아이",
+      "index": 1,
+      "start_time": "2025-08-22T17:17:15.645124",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_171715_anime_classification_test_batch/search_results/search_01_최애의 아이.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_171715_anime_classification_test_batch/llm_results/llm_01_최애의 아이.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_171715_anime_classification_test_batch/metadata_results/metadata_01_최애의 아이.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_171715_anime_classification_test_batch/notion_results/notion_01_최애의 아이.json",
+          "notion_page_url": "https://www.notion.so/c4217657dbbc415db4401b79363b0972"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T17:17:24.745610"
+    }
+  ],
+  "execution_time": "2025-08-22T17:17:24.745650"
+}
