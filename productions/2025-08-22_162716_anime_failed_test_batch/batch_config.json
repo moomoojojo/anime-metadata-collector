@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_162716_anime_failed_test_batch",
+  "execution_date": "2025-08-22T16:27:16.300622",
+  "source_csv": "anime_failed_test.csv",
+  "description": "실패 항목 수정 테스트",
+  "notion_database_id": "256670adb05a80d1ac76ebf9741e5628",
+  "openai_model": "gpt-4",
+  "total_items": 3
+}

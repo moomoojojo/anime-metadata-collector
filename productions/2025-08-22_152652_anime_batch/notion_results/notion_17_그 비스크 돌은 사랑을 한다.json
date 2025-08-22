@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-81d4-98eb-db2e33710d96",
+  "notion_page_url": "https://www.notion.so/257670adb05a81d498ebdb2e33710d96",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "그 비스크 돌은 사랑을 한다"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "그 비스크 돌은 사랑을 한다"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/40655"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/32bab2bd-2db8-46bb-83a8-c84d053434cf.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "CloverWorks"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:29:05.563937",
+  "user_input": "그 비스크 돌은 사랑을 한다"
+}

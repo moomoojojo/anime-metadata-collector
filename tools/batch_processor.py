@@ -300,7 +300,31 @@ class BatchProcessor:
             
             if not search_result.get("search_success"):
                 print(f"❌ Step 1 실패: {search_result.get('error_message', '알 수 없는 오류')}")
-                result["final_status"] = "step1_failed"
+                print(f"📝 라프텔에 없는 애니메이션도 노션 페이지 생성")
+                
+                # 라프텔에 없어도 노션 페이지는 생성
+                notion_result = step4_notion_upload.upload_to_notion(None, anime_title)
+                
+                notion_file = os.path.join(self.notion_dir, f"notion_{index+1:02d}_{anime_title.replace('/', '_')}.json")
+                notion_result["upload_timestamp"] = datetime.now().isoformat()
+                notion_result["user_input"] = anime_title
+                
+                with open(notion_file, 'w', encoding='utf-8') as f:
+                    json.dump(notion_result, f, ensure_ascii=False, indent=2)
+                
+                result["steps"]["step4"] = {
+                    "success": notion_result.get("upload_success", False),
+                    "file": notion_file,
+                    "notion_page_url": notion_result.get("notion_page_url", "")
+                }
+                
+                if notion_result.get("upload_success"):
+                    self.results["step_stats"]["step4_success"] += 1
+                    result["final_status"] = "step1_failed_but_notion_created"
+                    print(f"✅ 노션 페이지 생성 성공 (라프텔 정보 없음)")
+                else:
+                    result["final_status"] = "step1_failed"
+                
                 return result
             
             self.results["step_stats"]["step1_success"] += 1
@@ -325,7 +349,31 @@ class BatchProcessor:
             
             if not llm_result.get("matching_success") or llm_result.get("match_status") != "match_found":
                 print(f"❌ Step 2 실패: 매칭되지 않음")
-                result["final_status"] = "step2_failed"
+                print(f"📝 LLM 매칭 실패해도 노션 페이지 생성")
+                
+                # LLM 매칭 실패해도 노션 페이지는 생성
+                notion_result = step4_notion_upload.upload_to_notion(None, anime_title)
+                
+                notion_file = os.path.join(self.notion_dir, f"notion_{index+1:02d}_{anime_title.replace('/', '_')}.json")
+                notion_result["upload_timestamp"] = datetime.now().isoformat()
+                notion_result["user_input"] = anime_title
+                
+                with open(notion_file, 'w', encoding='utf-8') as f:
+                    json.dump(notion_result, f, ensure_ascii=False, indent=2)
+                
+                result["steps"]["step4"] = {
+                    "success": notion_result.get("upload_success", False),
+                    "file": notion_file,
+                    "notion_page_url": notion_result.get("notion_page_url", "")
+                }
+                
+                if notion_result.get("upload_success"):
+                    self.results["step_stats"]["step4_success"] += 1
+                    result["final_status"] = "step2_failed_but_notion_created"
+                    print(f"✅ 노션 페이지 생성 성공 (LLM 매칭 실패)")
+                else:
+                    result["final_status"] = "step2_failed"
+                
                 return result
             
             self.results["step_stats"]["step2_success"] += 1

@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-81fb-8657-e2519f6c54be",
+  "notion_page_url": "https://www.notion.so/2-257670adb05a81fb8657e2519f6c54be",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "명탐정 코난 극장판 2기: 14번째의 표적"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "(더빙) 극장판 명탐정 코난 2기: 열네번째 표적"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.2
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/16920"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/f49c0f9d-f561-43f8-84c7-f253aeff9e94.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "TMS 엔터테인먼트"
+      }
+    },
+    "총 화수": {
+      "number": 1
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:29:59.332295",
+  "user_input": "명탐정 코난 극장판 2기: 14번째의 표적"
+}

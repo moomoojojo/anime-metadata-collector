@@ -1,0 +1,6 @@
+{
+  "upload_success": false,
+  "error": "HTTP 400: {\"object\":\"error\",\"status\":400,\"code\":\"validation_error\",\"message\":\"방영분기 is expected to be rich_text.\",\"request_id\":\"6a9c0726-38e2-4781-9718-f97641f6d08f\"}",
+  "upload_timestamp": "2025-08-22T16:28:51.484582",
+  "user_input": "최애의 아이"
+}

@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-8144-8fd6-ee97d6d44fc2",
+  "notion_page_url": "https://www.notion.so/257670adb05a81448fd6ee97d6d44fc2",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "마법소녀 마도카 마기카"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "마법소녀 마도카 마기카 - 판권 부활"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/40977"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/a8749066-b729-4c30-9bdb-3a137fec8ddc.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "샤프트"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:29:25.846011",
+  "user_input": "마법소녀 마도카 마기카"
+}

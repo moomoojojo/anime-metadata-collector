@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-816d-819c-fb4a01e6dd91",
+  "notion_page_url": "https://www.notion.so/257670adb05a816d819cfb4a01e6dd91",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "도망을 잘 치는 도련님"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "도망을 잘 치는 도련님"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.7
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/42294"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/1252e78d-6cb4-4ff4-8e84-dcfe8c3e6f15.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "CloverWorks"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:28:05.786470",
+  "user_input": "도망을 잘 치는 도련님"
+}

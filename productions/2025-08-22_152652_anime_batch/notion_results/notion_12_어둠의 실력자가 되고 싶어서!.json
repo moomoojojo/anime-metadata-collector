@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-8120-a151-ee1f09e8ec33",
+  "notion_page_url": "https://www.notion.so/part-1-257670adb05a8120a151ee1f09e8ec33",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "어둠의 실력자가 되고 싶어서!"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "어둠의 실력자가 되고 싶어서! part 1"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.4
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41094"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/ab396e78-71a5-4374-b5a3-cbba4b11df87.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "Nexus"
+      }
+    },
+    "총 화수": {
+      "number": 13
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:28:13.587366",
+  "user_input": "어둠의 실력자가 되고 싶어서!"
+}

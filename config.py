@@ -27,8 +27,8 @@ NOTION_RESULT_FILE = f"{RESULTS_DIR}/notion_result.json"
 
 # 노션 필드 매핑 (업데이트 버전)
 NOTION_FIELD_MAPPING = {
-    "입력 제목": "user_input",           # 사용자 최초 입력
-    "제목": "name",                      # 실제 매칭된 제목 (Title 칼럼)
+    "제목": "user_input",                # 사용자 입력 제목 (Title 칼럼)
+    "라프텔 제목": "name",               # 라프텔에서 매칭된 제목
     "방영분기": "air_year_quarter", 
     "라프텔 평점": "avg_rating",
     "상태": "status",

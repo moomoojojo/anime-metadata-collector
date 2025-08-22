@@ -1,0 +1,81 @@
+{
+  "batch_id": "2025-08-22_162753_anime_failed_test_batch",
+  "execution_summary": {
+    "total_items": 3,
+    "success_count": 0,
+    "failed_count": 3,
+    "success_rate": "0.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 0,
+    "step3_success": 0,
+    "step4_success": 3
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "던전밥",
+      "index": 1,
+      "start_time": "2025-08-22T16:27:53.350139",
+      "steps": {
+        "step1": {
+          "success": false,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/search_results/search_01_던전밥.json",
+          "candidates_count": 0
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/notion_results/notion_01_던전밥.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81768518fa1b4838d62c"
+        }
+      },
+      "final_status": "step1_failed_but_notion_created",
+      "end_time": "2025-08-22T16:27:54.186877"
+    },
+    {
+      "anime_title": "헬싱 OVA",
+      "index": 2,
+      "start_time": "2025-08-22T16:27:54.186910",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/search_results/search_02_헬싱 OVA.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/llm_results/llm_02_헬싱 OVA.json",
+          "match_status": "no_match"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/notion_results/notion_02_헬싱 OVA.json",
+          "notion_page_url": "https://www.notion.so/OVA-257670adb05a81cdb953f980f69338d8"
+        }
+      },
+      "final_status": "step2_failed_but_notion_created",
+      "end_time": "2025-08-22T16:28:08.944638"
+    },
+    {
+      "anime_title": "인빈서블",
+      "index": 3,
+      "start_time": "2025-08-22T16:28:08.944663",
+      "steps": {
+        "step1": {
+          "success": false,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/search_results/search_03_인빈서블.json",
+          "candidates_count": 0
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_162753_anime_failed_test_batch/notion_results/notion_03_인빈서블.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a811d90c1ce4c4956b5cf"
+        }
+      },
+      "final_status": "step1_failed_but_notion_created",
+      "end_time": "2025-08-22T16:28:11.506263"
+    }
+  ],
+  "execution_time": "2025-08-22T16:28:11.506283"
+}

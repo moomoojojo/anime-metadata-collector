@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-08-22_163050_anime_success_test_batch",
+  "execution_date": "2025-08-22T16:30:50.680037",
+  "source_csv": "anime_success_test.csv",
+  "description": "성공 항목 방영분기 다중선택 테스트",
+  "notion_database_id": "256670adb05a80d1ac76ebf9741e5628",
+  "openai_model": "gpt-4",
+  "total_items": 2
+}

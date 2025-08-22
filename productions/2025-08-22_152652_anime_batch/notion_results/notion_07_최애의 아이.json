@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-817c-b84a-c14ae60638d2",
+  "notion_page_url": "https://www.notion.so/257670adb05a817cb84ac14ae60638d2",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "최애의 아이"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "【최애의 아이】"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.7
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41389"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/f380a25a-1280-42de-a052-0ea413c87e79.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "동화공방"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:27:35.971553",
+  "user_input": "최애의 아이"
+}

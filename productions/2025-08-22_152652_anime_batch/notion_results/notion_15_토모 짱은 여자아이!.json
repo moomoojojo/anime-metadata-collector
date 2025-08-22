@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-8158-a680-c01af50726d0",
+  "notion_page_url": "https://www.notion.so/257670adb05a8158a680c01af50726d0",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "토모 짱은 여자아이!"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "토모 짱은 여자아이!"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.4
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/41220"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/70307067-5676-40b8-b9aa-bd78fb048fce.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "Lay-duce"
+      }
+    },
+    "총 화수": {
+      "number": 13
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:28:48.674420",
+  "user_input": "토모 짱은 여자아이!"
+}

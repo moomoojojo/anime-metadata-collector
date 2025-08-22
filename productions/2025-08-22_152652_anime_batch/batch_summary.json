@@ -1,0 +1,654 @@
+{
+  "batch_id": "2025-08-22_152652_anime_batch",
+  "execution_summary": {
+    "total_items": 24,
+    "success_count": 21,
+    "failed_count": 3,
+    "success_rate": "87.5%"
+  },
+  "step_statistics": {
+    "step1_success": 22,
+    "step2_success": 21,
+    "step3_success": 21,
+    "step4_success": 21
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "SPY×FAMILY part 1",
+      "index": 1,
+      "start_time": "2025-08-22T15:26:52.406888",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_01_SPY×FAMILY part 1.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_01_SPY×FAMILY part 1.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_01_SPY×FAMILY part 1.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_01_SPY×FAMILY part 1.json",
+          "notion_page_url": "https://www.notion.so/SPY-FAMILY-part-1-257670adb05a81b7b7c6d40545ac31d9"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:00.685653"
+    },
+    {
+      "anime_title": "스크라이드",
+      "index": 2,
+      "start_time": "2025-08-22T15:27:00.685713",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_02_스크라이드.json",
+          "candidates_count": 13
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_02_스크라이드.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_02_스크라이드.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_02_스크라이드.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81f38afcf9aaabebdc6e"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:06.347602"
+    },
+    {
+      "anime_title": "장송의 프리렌 1기",
+      "index": 3,
+      "start_time": "2025-08-22T15:27:06.347659",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_03_장송의 프리렌 1기.json",
+          "candidates_count": 8
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_03_장송의 프리렌 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_03_장송의 프리렌 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_03_장송의 프리렌 1기.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81e1845beb9777dbb266"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:16.621119"
+    },
+    {
+      "anime_title": "던전밥",
+      "index": 4,
+      "start_time": "2025-08-22T15:27:16.621176",
+      "steps": {
+        "step1": {
+          "success": false,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_04_던전밥.json",
+          "candidates_count": 0
+        }
+      },
+      "final_status": "step1_failed",
+      "end_time": "2025-08-22T15:27:16.681024"
+    },
+    {
+      "anime_title": "헬싱 OVA",
+      "index": 5,
+      "start_time": "2025-08-22T15:27:16.681067",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_05_헬싱 OVA.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_05_헬싱 OVA.json",
+          "match_status": "no_match"
+        }
+      },
+      "final_status": "step2_failed",
+      "end_time": "2025-08-22T15:27:22.036631"
+    },
+    {
+      "anime_title": "Re: 제로부터 시작하는 이세계 생활 3기",
+      "index": 6,
+      "start_time": "2025-08-22T15:27:22.036670",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_06_Re: 제로부터 시작하는 이세계 생활 3기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_06_Re: 제로부터 시작하는 이세계 생활 3기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_06_Re: 제로부터 시작하는 이세계 생활 3기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_06_Re: 제로부터 시작하는 이세계 생활 3기.json",
+          "notion_page_url": "https://www.notion.so/Re-3-257670adb05a81c6998ffa64c9af3604"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:29.002302"
+    },
+    {
+      "anime_title": "최애의 아이",
+      "index": 7,
+      "start_time": "2025-08-22T15:27:29.002339",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_07_최애의 아이.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_07_최애의 아이.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_07_최애의 아이.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_07_최애의 아이.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a817cb84ac14ae60638d2"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:35.972521"
+    },
+    {
+      "anime_title": "인빈서블",
+      "index": 8,
+      "start_time": "2025-08-22T15:27:35.972573",
+      "steps": {
+        "step1": {
+          "success": false,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_08_인빈서블.json",
+          "candidates_count": 0
+        }
+      },
+      "final_status": "step1_failed",
+      "end_time": "2025-08-22T15:27:36.031992"
+    },
+    {
+      "anime_title": "트라이건 스탬피드",
+      "index": 9,
+      "start_time": "2025-08-22T15:27:36.032075",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_09_트라이건 스탬피드.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_09_트라이건 스탬피드.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_09_트라이건 스탬피드.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_09_트라이건 스탬피드.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81689ee5c19e8a22c64d"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:45.318830"
+    },
+    {
+      "anime_title": "라자로",
+      "index": 10,
+      "start_time": "2025-08-22T15:27:45.318902",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_10_라자로.json",
+          "candidates_count": 7
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_10_라자로.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_10_라자로.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_10_라자로.json",
+          "notion_page_url": "https://www.notion.so/LAZARUS-257670adb05a817db051ff1790ec2bd9"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:27:51.427678"
+    },
+    {
+      "anime_title": "도망을 잘 치는 도련님",
+      "index": 11,
+      "start_time": "2025-08-22T15:27:51.427773",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_11_도망을 잘 치는 도련님.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_11_도망을 잘 치는 도련님.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_11_도망을 잘 치는 도련님.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_11_도망을 잘 치는 도련님.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a816d819cfb4a01e6dd91"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:28:05.786967"
+    },
+    {
+      "anime_title": "어둠의 실력자가 되고 싶어서!",
+      "index": 12,
+      "start_time": "2025-08-22T15:28:05.786995",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_12_어둠의 실력자가 되고 싶어서!.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_12_어둠의 실력자가 되고 싶어서!.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_12_어둠의 실력자가 되고 싶어서!.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_12_어둠의 실력자가 되고 싶어서!.json",
+          "notion_page_url": "https://www.notion.so/part-1-257670adb05a8120a151ee1f09e8ec33"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:28:13.588303"
+    },
+    {
+      "anime_title": "터무니 없는 스킬로 이세계 방랑밥",
+      "index": 13,
+      "start_time": "2025-08-22T15:28:13.588347",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_13_터무니 없는 스킬로 이세계 방랑밥.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_13_터무니 없는 스킬로 이세계 방랑밥.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_13_터무니 없는 스킬로 이세계 방랑밥.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_13_터무니 없는 스킬로 이세계 방랑밥.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a8115a668df60ce5d8732"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:28:20.207931"
+    },
+    {
+      "anime_title": "이세계 유유자적 농가",
+      "index": 14,
+      "start_time": "2025-08-22T15:28:20.207959",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_14_이세계 유유자적 농가.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_14_이세계 유유자적 농가.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_14_이세계 유유자적 농가.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_14_이세계 유유자적 농가.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a819aba88e37177c9ad3e"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:28:37.704267"
+    },
+    {
+      "anime_title": "토모 짱은 여자아이!",
+      "index": 15,
+      "start_time": "2025-08-22T15:28:37.704317",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_15_토모 짱은 여자아이!.json",
+          "candidates_count": 17
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_15_토모 짱은 여자아이!.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_15_토모 짱은 여자아이!.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_15_토모 짱은 여자아이!.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a8158a680c01af50726d0"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:28:48.675541"
+    },
+    {
+      "anime_title": "아픈 건 싫으니까 방어력에 올인하려고 합니다 2기",
+      "index": 16,
+      "start_time": "2025-08-22T15:28:48.675597",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_16_아픈 건 싫으니까 방어력에 올인하려고 합니다 2기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_16_아픈 건 싫으니까 방어력에 올인하려고 합니다 2기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_16_아픈 건 싫으니까 방어력에 올인하려고 합니다 2기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_16_아픈 건 싫으니까 방어력에 올인하려고 합니다 2기.json",
+          "notion_page_url": "https://www.notion.so/2-257670adb05a81739eeeecd5ace83356"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:28:54.076480"
+    },
+    {
+      "anime_title": "그 비스크 돌은 사랑을 한다",
+      "index": 17,
+      "start_time": "2025-08-22T15:28:54.076625",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_17_그 비스크 돌은 사랑을 한다.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_17_그 비스크 돌은 사랑을 한다.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_17_그 비스크 돌은 사랑을 한다.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_17_그 비스크 돌은 사랑을 한다.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81d498ebdb2e33710d96"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:05.564806"
+    },
+    {
+      "anime_title": "Vivy Fluorite Eyes Song",
+      "index": 18,
+      "start_time": "2025-08-22T15:29:05.564847",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_18_Vivy Fluorite Eyes Song.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_18_Vivy Fluorite Eyes Song.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_18_Vivy Fluorite Eyes Song.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_18_Vivy Fluorite Eyes Song.json",
+          "notion_page_url": "https://www.notion.so/Vivy-Fluorite-Eye-s-Song-257670adb05a810c824aebd4fea001c9"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:12.211577"
+    },
+    {
+      "anime_title": "스파이 패밀리 1기",
+      "index": 19,
+      "start_time": "2025-08-22T15:29:12.211630",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_19_스파이 패밀리 1기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_19_스파이 패밀리 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_19_스파이 패밀리 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_19_스파이 패밀리 1기.json",
+          "notion_page_url": "https://www.notion.so/SPY-FAMILY-part-1-257670adb05a81b3b5a7c5184c57837e"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:18.475696"
+    },
+    {
+      "anime_title": "마법소녀 마도카 마기카",
+      "index": 20,
+      "start_time": "2025-08-22T15:29:18.475745",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_20_마법소녀 마도카 마기카.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_20_마법소녀 마도카 마기카.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_20_마법소녀 마도카 마기카.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_20_마법소녀 마도카 마기카.json",
+          "notion_page_url": "https://www.notion.so/257670adb05a81448fd6ee97d6d44fc2"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:25.847079"
+    },
+    {
+      "anime_title": "Re: 제로부터 시작하는 이세계 생활 1기",
+      "index": 21,
+      "start_time": "2025-08-22T15:29:25.847238",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_21_Re: 제로부터 시작하는 이세계 생활 1기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_21_Re: 제로부터 시작하는 이세계 생활 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_21_Re: 제로부터 시작하는 이세계 생활 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_21_Re: 제로부터 시작하는 이세계 생활 1기.json",
+          "notion_page_url": "https://www.notion.so/Re-257670adb05a8128a50fe0ea3c6b77d9"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:36.829753"
+    },
+    {
+      "anime_title": "Re: 제로부터 시작하는 이세계 생활 2기",
+      "index": 22,
+      "start_time": "2025-08-22T15:29:36.829811",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_22_Re: 제로부터 시작하는 이세계 생활 2기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_22_Re: 제로부터 시작하는 이세계 생활 2기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_22_Re: 제로부터 시작하는 이세계 생활 2기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_22_Re: 제로부터 시작하는 이세계 생활 2기.json",
+          "notion_page_url": "https://www.notion.so/Re-2-part-1-257670adb05a8108ba93f8e144bdc2d4"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:44.277612"
+    },
+    {
+      "anime_title": "아픈 건 싫으니까 방어력에 올인하려고 합니다 1기",
+      "index": 23,
+      "start_time": "2025-08-22T15:29:44.277676",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_23_아픈 건 싫으니까 방어력에 올인하려고 합니다 1기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_23_아픈 건 싫으니까 방어력에 올인하려고 합니다 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_23_아픈 건 싫으니까 방어력에 올인하려고 합니다 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_23_아픈 건 싫으니까 방어력에 올인하려고 합니다 1기.json",
+          "notion_page_url": "https://www.notion.so/1-257670adb05a81be90eed37ff2c65e06"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:52.877666"
+    },
+    {
+      "anime_title": "명탐정 코난 극장판 2기: 14번째의 표적",
+      "index": 24,
+      "start_time": "2025-08-22T15:29:52.877720",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/search_results/search_24_명탐정 코난 극장판 2기: 14번째의 표적.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/llm_results/llm_24_명탐정 코난 극장판 2기: 14번째의 표적.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/metadata_results/metadata_24_명탐정 코난 극장판 2기: 14번째의 표적.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-08-22_152652_anime_batch/notion_results/notion_24_명탐정 코난 극장판 2기: 14번째의 표적.json",
+          "notion_page_url": "https://www.notion.so/2-257670adb05a81fb8657e2519f6c54be"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-08-22T15:29:59.333299"
+    }
+  ],
+  "execution_time": "2025-08-22T15:29:59.333342"
+}

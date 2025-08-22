@@ -1,0 +1,18 @@
+{
+  "metadata_success": true,
+  "user_input": "최애의 아이",
+  "selected_title": "【최애의 아이】",
+  "anime_id": 41389,
+  "confidence": 95,
+  "metadata": {
+    "name": "【최애의 아이】",
+    "air_year_quarter": "2023년 2분기",
+    "avg_rating": 4.7,
+    "status": "완결",
+    "laftel_url": "https://laftel.net/item/41389",
+    "cover_url": "https://thumbnail.laftel.net/items/thumbs/big/f380a25a-1280-42de-a052-0ea413c87e79.jpg",
+    "production": "동화공방",
+    "total_episodes": 12
+  },
+  "timestamp": "2025-08-22T15:27:35.449693"
+}

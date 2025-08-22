@@ -1,0 +1,57 @@
+{
+  "upload_success": true,
+  "notion_page_id": "257670ad-b05a-81f3-8afc-f9aaabebdc6e",
+  "notion_page_url": "https://www.notion.so/257670adb05a81f38afcf9aaabebdc6e",
+  "uploaded_fields": {
+    "입력 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "스크라이드"
+          }
+        }
+      ]
+    },
+    "제목": {
+      "title": [
+        {
+          "text": {
+            "content": "스크라이드"
+          }
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 3.7
+    },
+    "상태": {
+      "select": {
+        "name": "완결"
+      }
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/14351"
+    },
+    "커버 URL": {
+      "files": [
+        {
+          "type": "external",
+          "name": "Cover Image",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/8ccd3a9e-ec5f-408c-a6dd-de3f4cc6dab4.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "선라이즈"
+      }
+    },
+    "총 화수": {
+      "number": 0
+    }
+  },
+  "upload_timestamp": "2025-08-22T15:27:06.346525",
+  "user_input": "스크라이드"
+}

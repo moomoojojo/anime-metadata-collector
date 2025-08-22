@@ -1,0 +1,21 @@
+{
+  "user_input": "라자로",
+  "candidate_titles": [
+    "LAZARUS 라자로",
+    "살애",
+    "달링 인 더 프랑키스",
+    "은하철도 999 : 이터널 판타지",
+    "PET",
+    "도쿄 24구",
+    "(더빙) 마징가 Z"
+  ],
+  "llm_timestamp": "2025-08-22T15:27:50.360170",
+  "matching_success": true,
+  "assistant_raw_response": "```json\n{\n  \"status\": \"match_found\",\n  \"selected_title\": \"LAZARUS 라자로\",\n  \"confidence\": 95,\n  \"reason\": \"사용자 입력 '라자로'와 후보 'LAZARUS 라자로'가 제목에서 정확히 일치합니다. 시즌 및 자막/더빙 정보가 없으나, 후보 중 유일하게 핵심 키워드 '라자로'가 포함되어 있습니다.\"\n}\n```",
+  "thread_id": "thread_Lr4UoP88CrsC1G9l2CAMlBg3",
+  "run_id": "run_sop6xKoMkmTqRccgBpXE5Ofb",
+  "match_status": "match_found",
+  "selected_title": "LAZARUS 라자로",
+  "confidence": 95,
+  "reason": "사용자 입력 '라자로'와 후보 'LAZARUS 라자로'가 제목에서 정확히 일치합니다. 시즌 및 자막/더빙 정보가 없으나, 후보 중 유일하게 핵심 키워드 '라자로'가 포함되어 있습니다."
+}

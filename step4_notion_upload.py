@@ -49,38 +49,46 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
     # 필수 필드들을 노션 형식으로 변환
     field_mapping = config.NOTION_FIELD_MAPPING
     
-    # 입력 제목 (Rich Text)
-    if "입력 제목" in field_mapping:
-        properties["입력 제목"] = {
-            "rich_text": [{"text": {"content": user_input}}]
+    # 제목 (Title) - 사용자 입력 제목을 노션 제목 칼럼에
+    if "제목" in field_mapping:
+        properties["제목"] = {
+            "title": [{"text": {"content": user_input}}]
         }
     
-    # 제목 (Title) - 노션 데이터베이스의 제목 칼럼
-    if "제목" in field_mapping and "name" in metadata:
-        properties["제목"] = {
-            "title": [{"text": {"content": metadata["name"]}}]
+    # 라프텔 제목 (Rich Text) - 라프텔에서 매칭된 제목
+    if "라프텔 제목" in field_mapping and metadata and "name" in metadata:
+        properties["라프텔 제목"] = {
+            "rich_text": [{"text": {"content": metadata["name"]}}]
+        }
+    
+    # 방영분기 (Multi-select)
+    if "방영분기" in field_mapping and metadata and "air_year_quarter" in metadata and metadata["air_year_quarter"]:
+        # "|"로 구분된 여러 분기를 분리하여 다중 선택으로 처리
+        quarters = metadata["air_year_quarter"].split("|")
+        properties["방영분기"] = {
+            "multi_select": [{"name": quarter.strip()} for quarter in quarters if quarter.strip()]
         }
     
     # 라프텔 평점 (Number)
-    if "라프텔 평점" in field_mapping and "avg_rating" in metadata:
+    if "라프텔 평점" in field_mapping and metadata and "avg_rating" in metadata:
         properties["라프텔 평점"] = {
             "number": metadata["avg_rating"]
         }
     
-    # 상태 (Select) - 캡쳐 화면에서 Select 타입으로 확인됨
-    if "상태" in field_mapping and "status" in metadata:
+    # 상태 (Select)
+    if "상태" in field_mapping and metadata and "status" in metadata:
         properties["상태"] = {
             "select": {"name": metadata["status"]}
         }
     
     # 라프텔 URL (URL)
-    if "라프텔 URL" in field_mapping and "laftel_url" in metadata:
+    if "라프텔 URL" in field_mapping and metadata and "laftel_url" in metadata:
         properties["라프텔 URL"] = {
             "url": metadata["laftel_url"]
         }
     
     # 커버 URL (Files & Media)
-    if "커버 URL" in field_mapping and "cover_url" in metadata:
+    if "커버 URL" in field_mapping and metadata and "cover_url" in metadata:
         properties["커버 URL"] = {
             "files": [
                 {
@@ -94,13 +102,13 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str) -> 
         }
     
     # 제작사 (Select) - 빈 값이면 스킵
-    if "제작사" in field_mapping and "production" in metadata and metadata["production"].strip():
+    if "제작사" in field_mapping and metadata and "production" in metadata and metadata["production"].strip():
         properties["제작사"] = {
             "select": {"name": metadata["production"]}
         }
     
     # 총 화수 (Number)
-    if "총 화수" in field_mapping and "total_episodes" in metadata:
+    if "총 화수" in field_mapping and metadata and "total_episodes" in metadata:
         properties["총 화수"] = {
             "number": metadata["total_episodes"]
         }
@@ -132,7 +140,10 @@ def upload_to_notion(metadata: Dict[str, Any], user_input: str) -> Dict[str, Any
     }
     
     print(f"🚀 노션 페이지 생성 중...")
-    print(f"📝 제목: {metadata.get('name', 'Unknown')}")
+    if metadata and "name" in metadata:
+        print(f"📝 제목: {metadata['name']}")
+    else:
+        print(f"📝 제목: {user_input} (라프텔 정보 없음)")
     
     try:
         response = requests.post(
