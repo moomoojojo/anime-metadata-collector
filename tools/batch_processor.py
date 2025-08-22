@@ -227,7 +227,7 @@ class BatchProcessor:
                 "status": status,
                 "laftel_url": info.url or "",
                 "cover_url": info.image or "",
-                "production": info.production if info.production is not None else "",
+                "production": info.production.get("name", "") if isinstance(info.production, dict) else (info.production or ""),
                 "total_episodes": total_episodes
             }
             

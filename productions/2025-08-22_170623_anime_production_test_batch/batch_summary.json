@@ -1,0 +1,42 @@
+{
+  "batch_id": "2025-08-22_170623_anime_production_test_batch",
+  "execution_summary": {
+    "total_items": 1,
+    "success_count": 0,
+    "failed_count": 1,
+    "success_rate": "0.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 1,
+    "step3_success": 0,
+    "step4_success": 0
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "장송의 프리렌 1기",
+      "index": 1,
+      "start_time": "2025-08-22T17:06:23.184284",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-08-22_170623_anime_production_test_batch/search_results/search_01_장송의 프리렌 1기.json",
+          "candidates_count": 8
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-08-22_170623_anime_production_test_batch/llm_results/llm_01_장송의 프리렌 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": false,
+          "file": "productions/2025-08-22_170623_anime_production_test_batch/metadata_results/metadata_01_장송의 프리렌 1기.json"
+        }
+      },
+      "final_status": "step3_failed",
+      "end_time": "2025-08-22T17:06:30.143808"
+    }
+  ],
+  "execution_time": "2025-08-22T17:06:30.143834"
+}
