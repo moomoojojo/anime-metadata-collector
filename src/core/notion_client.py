@@ -95,6 +95,11 @@ class NotionClient:
         
         # 메타데이터가 있는 경우에만 추가 속성 설정
         if metadata:
+            # 분류를 명시적으로 "애니메이션"으로 설정
+            properties["분류"] = {
+                "select": {"name": "애니메이션"}
+            }
+            
             # 라프텔 제목
             if metadata.name:
                 properties["라프텔 제목"] = {

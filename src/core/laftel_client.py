@@ -106,6 +106,117 @@ class LaftelClient:
         except json.JSONDecodeError as e:
             raise Exception(f"JSON 파싱 실패: {e}")
     
+    def _extract_status(self, info: Dict[str, Any]) -> str:
+        """라프텔 API 응답에서 방영 상태 추출"""
+        try:
+            # is_ending: 완결 여부
+            if info.get('is_ending', False):
+                return "완결"
+            
+            # is_upcoming_release: 방영 예정
+            if info.get('is_upcoming_release', False):
+                return "방영 예정"
+            
+            # is_new_release: 신작
+            if info.get('is_new_release', False):
+                return "방영 중"
+                
+            # latest_episode_release_datetime이 최근이면 방영 중
+            latest_episode = info.get('latest_episode_release_datetime')
+            if latest_episode:
+                from datetime import datetime, timedelta
+                try:
+                    latest_date = datetime.fromisoformat(latest_episode.replace('Z', '+00:00'))
+                    now = datetime.now(latest_date.tzinfo)
+                    if (now - latest_date).days < 30:  # 30일 이내면 방영 중
+                        return "방영 중"
+                except:
+                    pass
+            
+            # 기본값
+            return "완결"
+            
+        except Exception as e:
+            print(f"⚠️ 상태 추출 실패: {e}")
+            return "알 수 없음"
+    
+    def _extract_cover_image(self, info: Dict[str, Any]) -> Optional[str]:
+        """라프텔 API 응답에서 표지 이미지 URL 추출"""
+        try:
+            # 1순위: 직접 img 필드
+            if info.get('img'):
+                return info['img']
+            
+            # 2순위: images 배열에서 home_default 이미지
+            images = info.get('images', [])
+            if images:
+                for image in images:
+                    if image.get('option_name') == 'home_default':
+                        return image.get('img_url')
+                
+                # 첫 번째 이미지라도
+                if images[0].get('img_url'):
+                    return images[0]['img_url']
+            
+            # 3순위: image 필드 (혹시 있다면)
+            if info.get('image'):
+                return info['image']
+                
+            return None
+            
+        except Exception as e:
+            print(f"⚠️ 표지 이미지 추출 실패: {e}")
+            return None
+    
+    def _extract_total_episodes(self, info: Dict[str, Any], anime_id: int) -> Optional[int]:
+        """총 화수 정보 추출 (여러 방법 시도)"""
+        try:
+            # 1순위: API 응답에 직접 총 화수 정보가 있는지 확인
+            if info.get('total_episodes'):
+                print(f"📺 API에서 총 화수 발견: {info['total_episodes']}화")
+                return info['total_episodes']
+            
+            if info.get('episode_count'):
+                print(f"📺 API에서 화수 정보 발견: {info['episode_count']}화")
+                return info['episode_count']
+            
+            # 2순위: 에피소드 API 시도
+            try:
+                print(f"🎬 에피소드 API 조회 중...")
+                episodes = self._direct_get_episodes(anime_id)
+                if episodes:
+                    total = len(episodes)
+                    print(f"📺 에피소드 API에서 총 {total}화 확인")
+                    return total
+            except Exception as e:
+                print(f"⚠️ 에피소드 API 실패: {str(e)[:100]}...")
+            
+            # 3순위: 태그나 설명에서 화수 정보 추출
+            tags = info.get('tags', [])
+            for tag in tags:
+                if isinstance(tag, str) and ('화' in tag or '편' in tag):
+                    import re
+                    numbers = re.findall(r'(\d+)(?:화|편)', tag)
+                    if numbers:
+                        episode_count = int(numbers[0])
+                        print(f"📺 태그에서 화수 추출: {episode_count}화 (태그: {tag})")
+                        return episode_count
+            
+            # 4순위: 기본값 또는 추정
+            medium = info.get('medium', '')
+            if medium == 'TVA':  # TV 애니메이션
+                # is_ending이 true이고 recent하면 12화 정도로 추정
+                if info.get('is_ending', False):
+                    print(f"📺 TV 애니메이션 완결작 추정: 12화")
+                    return 12
+                    
+            print(f"⚠️ 총 화수 정보를 찾을 수 없음")
+            return None
+            
+        except Exception as e:
+            print(f"⚠️ 총 화수 추출 실패: {e}")
+            return None
+    
     def search_anime(self, user_input: str) -> SearchResult:
         """
         애니메이션 검색
@@ -269,23 +380,21 @@ class LaftelClient:
                     name = info.get('name', selected_title)
                     air_year_quarter = info.get('air_year_quarter')
                     avg_rating = info.get('avg_rating')
-                    status = info.get('status')
+                    
+                    # 방영 상태 추출 (is_ending, is_upcoming_release 등을 기반으로)
+                    status = self._extract_status(info)
+                    
                     laftel_url = f"https://laftel.net/item/{anime_id}"
-                    cover_url = info.get('image')  # 이미지 URL
+                    
+                    # 표지 이미지 추출 (여러 소스에서 시도)
+                    cover_url = self._extract_cover_image(info)
+                    
                     production = info.get('production')
                     
                     print(f"✅ 기본 정보 수집 완료: {name}")
                     
-                    # 에피소드 정보
-                    total_episodes = None
-                    try:
-                        print(f"🎬 에피소드 정보 조회 중...")
-                        episodes = self._direct_get_episodes(anime_id)
-                        if episodes:
-                            total_episodes = len(episodes)
-                            print(f"📺 총 {total_episodes}화 확인")
-                    except Exception as e:
-                        print(f"⚠️ 에피소드 정보 수집 실패: {e}")
+                    # 에피소드 정보 (여러 방법으로 시도)
+                    total_episodes = self._extract_total_episodes(info, anime_id)
                     
                     # 메타데이터 객체 생성
                     metadata = AnimeMetadata(
