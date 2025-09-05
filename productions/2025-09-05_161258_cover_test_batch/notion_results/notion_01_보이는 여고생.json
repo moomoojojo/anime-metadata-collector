@@ -1,0 +1,59 @@
+{
+  "page_id": "25c670ad-b05a-80cf-871e-d0b90cbc188d",
+  "page_url": "https://www.notion.so/25c670adb05a80cf871ed0b90cbc188d",
+  "is_new_page": false,
+  "updated_properties": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "보이는 여고생"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "보이는 여고생"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2021년 4분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.4
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/40514"
+    },
+    "표지": {
+      "files": [
+        {
+          "name": "표지.jpg",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/6c3bbbf8-71ef-4aac-acc6-6c1d84a15502.jpg"
+          }
+        }
+      ]
+    },
+    "제작사": {
+      "select": {
+        "name": "팟쇼네"
+      }
+    },
+    "총 화수": {
+      "number": 12
+    }
+  },
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:13:07.467547"
+}

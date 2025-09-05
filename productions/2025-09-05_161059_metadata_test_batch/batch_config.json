@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_161059_metadata_test_batch",
+  "source_csv": "metadata_test.csv",
+  "description": "메타데이터 패턴 분석",
+  "total_items": 3,
+  "start_time": "2025-09-05T16:10:59.863301",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

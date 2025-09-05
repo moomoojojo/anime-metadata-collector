@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_161331_witch_test_batch",
+  "source_csv": "witch_test.csv",
+  "description": "위치 워치 메타데이터 테스트",
+  "total_items": 1,
+  "start_time": "2025-09-05T16:13:31.688393",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

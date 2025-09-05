@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_160420_phase4_test_batch",
+  "source_csv": "phase4_test.csv",
+  "description": "JSON 수정 후 테스트",
+  "total_items": 1,
+  "start_time": "2025-09-05T16:04:20.132564",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

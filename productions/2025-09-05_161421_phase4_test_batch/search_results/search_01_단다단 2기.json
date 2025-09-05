@@ -1,0 +1,58 @@
+{
+  "user_input": "단다단 2기",
+  "search_query": "단다단",
+  "candidates": [
+    {
+      "title": "단다단",
+      "laftel_id": "42430",
+      "rank": 1,
+      "similarity_score": null
+    },
+    {
+      "title": "단다단 2기",
+      "laftel_id": "42902",
+      "rank": 2,
+      "similarity_score": null
+    },
+    {
+      "title": "SSSS.GRIDMAN",
+      "laftel_id": "38932",
+      "rank": 3,
+      "similarity_score": null
+    },
+    {
+      "title": "살애",
+      "laftel_id": "40697",
+      "rank": 4,
+      "similarity_score": null
+    },
+    {
+      "title": "괴이와 소녀와 행방불명",
+      "laftel_id": "42063",
+      "rank": 5,
+      "similarity_score": null
+    },
+    {
+      "title": "(자막) 썸머 워즈",
+      "laftel_id": "15785",
+      "rank": 6,
+      "similarity_score": null
+    },
+    {
+      "title": "화성특급",
+      "laftel_id": "42835",
+      "rank": 7,
+      "similarity_score": null
+    },
+    {
+      "title": "LAZARUS 라자로",
+      "laftel_id": "42769",
+      "rank": 8,
+      "similarity_score": null
+    }
+  ],
+  "total_found": 8,
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:14:21.308075"
+}

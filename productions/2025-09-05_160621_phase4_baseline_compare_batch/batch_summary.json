@@ -1,0 +1,47 @@
+{
+  "batch_id": "2025-09-05_160621_phase4_baseline_compare_batch",
+  "execution_summary": {
+    "total_items": 1,
+    "success_count": 1,
+    "failed_count": 0,
+    "success_rate": "100.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 1,
+    "step3_success": 1,
+    "step4_success": 1
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "스파이 패밀리 1기",
+      "index": 1,
+      "start_time": "2025-09-05T16:06:22.000499",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-09-05_160621_phase4_baseline_compare_batch/search_results/search_01_스파이 패밀리 1기.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-09-05_160621_phase4_baseline_compare_batch/llm_results/llm_01_스파이 패밀리 1기.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-09-05_160621_phase4_baseline_compare_batch/metadata_results/metadata_01_스파이 패밀리 1기.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-09-05_160621_phase4_baseline_compare_batch/notion_results/notion_01_스파이 패밀리 1기.json",
+          "notion_page_url": "https://www.notion.so/1-9d0dd8e3af5447faa2ed90c8df73e1d6"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-09-05T16:06:36.722953"
+    }
+  ],
+  "execution_time": "2025-09-05T16:06:36.722975"
+}

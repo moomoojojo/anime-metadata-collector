@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_161421_phase4_test_batch",
+  "source_csv": "phase4_test.csv",
+  "description": "단다단 2기 표지 수정 확인",
+  "total_items": 1,
+  "start_time": "2025-09-05T16:14:21.234494",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

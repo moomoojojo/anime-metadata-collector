@@ -1,0 +1,54 @@
+{
+  "page_id": "265670ad-b05a-8149-8b53-f1e5e482b2f6",
+  "page_url": "https://www.notion.so/2-265670adb05a81498b53f1e5e482b2f6",
+  "is_new_page": false,
+  "updated_properties": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "단다단 2기"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "단다단 2기"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2025년 3분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.8
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/42902"
+    },
+    "표지": {
+      "files": [
+        {
+          "name": "표지.jpg",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/f28d2b41-972e-43f1-adc3-09670560d3aa.jpg"
+          }
+        }
+      ]
+    },
+    "총 화수": {
+      "number": 10
+    }
+  },
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:14:29.671056"
+}

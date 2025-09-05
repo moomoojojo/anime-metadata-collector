@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_161258_cover_test_batch",
+  "source_csv": "cover_test.csv",
+  "description": "표지 필드 수정 테스트",
+  "total_items": 1,
+  "start_time": "2025-09-05T16:12:58.585049",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

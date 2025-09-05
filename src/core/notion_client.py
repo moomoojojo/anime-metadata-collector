@@ -125,11 +125,22 @@ class NotionClient:
                     "url": metadata.laftel_url
                 }
             
-            # 표지 이미지
+            # 표지 이미지 (files 타입)
             if metadata.cover_url:
-                properties["표지"] = {
-                    "url": metadata.cover_url
-                }
+                try:
+                    properties["표지"] = {
+                        "files": [
+                            {
+                                "name": "표지.jpg",
+                                "external": {
+                                    "url": metadata.cover_url
+                                }
+                            }
+                        ]
+                    }
+                    print(f"🖼️ 표지 URL 설정: {metadata.cover_url}")
+                except Exception as e:
+                    print(f"⚠️ 표지 설정 실패: {e} - 건너뜀")
             
             # 제작사
             if metadata.production:

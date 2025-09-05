@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_160621_phase4_baseline_compare_batch",
+  "source_csv": "phase4_baseline_compare.csv",
+  "description": "베이스라인 비교 테스트",
+  "total_items": 1,
+  "start_time": "2025-09-05T16:06:22.000280",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

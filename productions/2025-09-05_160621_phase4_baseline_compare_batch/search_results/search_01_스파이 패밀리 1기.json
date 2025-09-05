@@ -1,0 +1,130 @@
+{
+  "user_input": "스파이 패밀리 1기",
+  "search_query": "스파이 패밀리",
+  "candidates": [
+    {
+      "title": "(자막) 극장판 스파이 패밀리 코드 : 화이트",
+      "laftel_id": "42807",
+      "rank": 1,
+      "similarity_score": null
+    },
+    {
+      "title": "(더빙) 극장판 스파이 패밀리 코드 : 화이트",
+      "laftel_id": "42808",
+      "rank": 2,
+      "similarity_score": null
+    },
+    {
+      "title": "(더빙) SPY×FAMILY part 1",
+      "laftel_id": "40965",
+      "rank": 3,
+      "similarity_score": null
+    },
+    {
+      "title": "(더빙) 스파이즈",
+      "laftel_id": "39686",
+      "rank": 4,
+      "similarity_score": null
+    },
+    {
+      "title": "스파이 교실 part 2",
+      "laftel_id": "41508",
+      "rank": 5,
+      "similarity_score": null
+    },
+    {
+      "title": "(더빙) SPY×FAMILY Season 2",
+      "laftel_id": "41882",
+      "rank": 6,
+      "similarity_score": null
+    },
+    {
+      "title": "스파이 교실 part 1",
+      "laftel_id": "41256",
+      "rank": 7,
+      "similarity_score": null
+    },
+    {
+      "title": "(더빙) SPY×FAMILY part 2",
+      "laftel_id": "41285",
+      "rank": 8,
+      "similarity_score": null
+    },
+    {
+      "title": "(자막) SPY×FAMILY part 2",
+      "laftel_id": "41058",
+      "rank": 9,
+      "similarity_score": null
+    },
+    {
+      "title": "(자막) 스파이즈",
+      "laftel_id": "39687",
+      "rank": 10,
+      "similarity_score": null
+    },
+    {
+      "title": "(자막) SPY×FAMILY Season 2",
+      "laftel_id": "41644",
+      "rank": 11,
+      "similarity_score": null
+    },
+    {
+      "title": "(자막) SPY×FAMILY part 1",
+      "laftel_id": "40815",
+      "rank": 12,
+      "similarity_score": null
+    },
+    {
+      "title": "실바니안 패밀리 미니에피소드 시즌 2 -아이비- 영어",
+      "laftel_id": "41468",
+      "rank": 13,
+      "similarity_score": null
+    },
+    {
+      "title": "베스트 베리 패밀리 키즈송",
+      "laftel_id": "42191",
+      "rank": 14,
+      "similarity_score": null
+    },
+    {
+      "title": "극장판 짱구는 못말려 19기 : 태풍을 부르는 황금 스파이 대작전",
+      "laftel_id": "21466",
+      "rank": 15,
+      "similarity_score": null
+    },
+    {
+      "title": "실바니안 패밀리 미니에피소드 시즌 4 -피오니-",
+      "laftel_id": "41471",
+      "rank": 16,
+      "similarity_score": null
+    },
+    {
+      "title": "실바니안 패밀리 : 프레야의 꿈을 찾아서 - 한국어",
+      "laftel_id": "41937",
+      "rank": 17,
+      "similarity_score": null
+    },
+    {
+      "title": "실바니안 패밀리 - 하늘을 나는 모두의 커다란 꿈 영어",
+      "laftel_id": "41478",
+      "rank": 18,
+      "similarity_score": null
+    },
+    {
+      "title": "실바니안 패밀리 - 프레야의 해피 다이어리 시즌 1 영어",
+      "laftel_id": "41480",
+      "rank": 19,
+      "similarity_score": null
+    },
+    {
+      "title": "(더빙) 극장판 실바니안 패밀리: 프레야의 선물",
+      "laftel_id": "42201",
+      "rank": 20,
+      "similarity_score": null
+    }
+  ],
+  "total_found": 20,
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:06:22.069492"
+}

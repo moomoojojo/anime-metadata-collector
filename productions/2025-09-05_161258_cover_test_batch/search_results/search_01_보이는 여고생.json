@@ -1,0 +1,130 @@
+{
+  "user_input": "보이는 여고생",
+  "search_query": "보이는 여고생",
+  "candidates": [
+    {
+      "title": "보이는 여고생",
+      "laftel_id": "40514",
+      "rank": 1,
+      "similarity_score": null
+    },
+    {
+      "title": "수염을 깎다. 그리고 여고생을 줍다.",
+      "laftel_id": "40255",
+      "rank": 2,
+      "similarity_score": null
+    },
+    {
+      "title": "어쨌든 귀여워 여고편",
+      "laftel_id": "41509",
+      "rank": 3,
+      "similarity_score": null
+    },
+    {
+      "title": "사축 씨는 꼬마 유령에게 치유받고 싶어",
+      "laftel_id": "40810",
+      "rank": 4,
+      "similarity_score": null
+    },
+    {
+      "title": "원주민 공포만화",
+      "laftel_id": "39443",
+      "rank": 5,
+      "similarity_score": null
+    },
+    {
+      "title": "스낵 바스에",
+      "laftel_id": "41867",
+      "rank": 6,
+      "similarity_score": null
+    },
+    {
+      "title": "팝 팀 에픽 REPEAT (remix version)",
+      "laftel_id": "40595",
+      "rank": 7,
+      "similarity_score": null
+    },
+    {
+      "title": "하여튼 요즘 탐정은",
+      "laftel_id": "42936",
+      "rank": 8,
+      "similarity_score": null
+    },
+    {
+      "title": "다크 개더링",
+      "laftel_id": "41524",
+      "rank": 9,
+      "similarity_score": null
+    },
+    {
+      "title": "가끔씩 툭하고 러시아어로 부끄러워하는 옆자리의 아랴 양",
+      "laftel_id": "42278",
+      "rank": 10,
+      "similarity_score": null
+    },
+    {
+      "title": "도메스틱한 그녀",
+      "laftel_id": "39080",
+      "rank": 11,
+      "similarity_score": null
+    },
+    {
+      "title": "여동생만 있으면 돼.",
+      "laftel_id": "37979",
+      "rank": 12,
+      "similarity_score": null
+    },
+    {
+      "title": "음란한 아오는 공부를 할 수 없어",
+      "laftel_id": "39262",
+      "rank": 13,
+      "similarity_score": null
+    },
+    {
+      "title": "꼬씬",
+      "laftel_id": "37940",
+      "rank": 14,
+      "similarity_score": null
+    },
+    {
+      "title": "마요치키",
+      "laftel_id": "15943",
+      "rank": 15,
+      "similarity_score": null
+    },
+    {
+      "title": "바보걸",
+      "laftel_id": "37636",
+      "rank": 16,
+      "similarity_score": null
+    },
+    {
+      "title": "약캐 토모자키 군",
+      "laftel_id": "40161",
+      "rank": 17,
+      "similarity_score": null
+    },
+    {
+      "title": "시원찮은 그녀를 위한 육성방법 ♭ (2기)",
+      "laftel_id": "37178",
+      "rank": 18,
+      "similarity_score": null
+    },
+    {
+      "title": "순정 로맨티카",
+      "laftel_id": "18782",
+      "rank": 19,
+      "similarity_score": null
+    },
+    {
+      "title": "호리미야 -piece-",
+      "laftel_id": "41552",
+      "rank": 20,
+      "similarity_score": null
+    }
+  ],
+  "total_found": 20,
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:12:58.660888"
+}

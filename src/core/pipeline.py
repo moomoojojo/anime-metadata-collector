@@ -39,7 +39,7 @@ class AnimePipeline:
             # TODO: 필요시 설정 오버라이드 로직 구현
             pass
     
-    async def process_single(self, title: str) -> ProcessResult:
+    def process_single_sync(self, title: str) -> ProcessResult:
         """
         단일 애니메이션 처리 (배치/API 공통 로직)
         
@@ -190,9 +190,9 @@ class AnimePipeline:
             
             return create_error_result(title, error_msg, 0)
     
-    def process_single_sync(self, title: str) -> ProcessResult:
+    async def process_single(self, title: str) -> ProcessResult:
         """
-        동기 버전의 단일 애니메이션 처리 (현재 구현은 동기식)
+        비동기 버전의 단일 애니메이션 처리 (향후 사용)
         
         Args:
             title: 처리할 애니메이션 제목
@@ -200,10 +200,8 @@ class AnimePipeline:
         Returns:
             ProcessResult: 처리 결과
         """
-        # 현재 모든 클라이언트가 동기식이므로 바로 호출
-        # 향후 비동기 지원시 이 부분을 수정
-        import asyncio
-        return asyncio.run(self.process_single(title))
+        # 현재는 동기 버전을 호출
+        return self.process_single_sync(title)
     
     def _create_failure_result(self, title: str, step_name: str, error_message: str, 
                               steps_completed: int, **step_results) -> ProcessResult:

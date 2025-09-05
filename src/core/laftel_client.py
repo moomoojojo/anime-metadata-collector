@@ -72,7 +72,7 @@ class LaftelClient:
             search_results = None
             for attempt in range(self.retry_count):
                 try:
-                    search_results = laftel.search(search_query)
+                    search_results = laftel.sync.searchAnime(search_query)
                     break
                 except Exception as e:
                     print(f"⚠️ 검색 시도 {attempt + 1} 실패: {e}")
@@ -137,7 +137,7 @@ class LaftelClient:
     def get_anime_by_name(self, anime_name: str) -> Optional[Any]:
         """애니메이션 이름으로 정확한 객체 찾기"""
         try:
-            search_results = laftel.search(anime_name)
+            search_results = laftel.sync.searchAnime(anime_name)
             
             # 정확한 매칭 찾기
             for item in search_results:
@@ -187,14 +187,16 @@ class LaftelClient:
             # 재시도 로직 포함 메타데이터 수집
             for attempt in range(self.retry_count):
                 try:
-                    # 기본 정보
-                    name = anime_obj.name
-                    air_year_quarter = getattr(anime_obj, 'air_year_quarter', None)
-                    avg_rating = getattr(anime_obj, 'avg_rating', None)
-                    status = getattr(anime_obj, 'status', None)
+                    # 상세 정보 재조회 (laftel API 사용)
+                    info = laftel.sync.getAnimeInfo(anime_id)
+                    
+                    name = info.name
+                    air_year_quarter = getattr(info, 'air_year_quarter', None)
+                    avg_rating = getattr(info, 'avg_rating', None)
+                    status = getattr(info, 'status', None)
                     laftel_url = f"https://laftel.net/item/{anime_id}"
-                    cover_url = getattr(anime_obj, 'img', None)
-                    production = getattr(anime_obj, 'production', None)
+                    cover_url = getattr(info, 'image', None)  # 수정: img → image
+                    production = getattr(info, 'production', None)
                     
                     print(f"✅ 기본 정보 수집 완료: {name}")
                     
@@ -202,7 +204,7 @@ class LaftelClient:
                     total_episodes = None
                     try:
                         print(f"🎬 에피소드 정보 조회 중...")
-                        episodes = anime_obj.episodes
+                        episodes = laftel.sync.searchEpisodes(anime_id)
                         if episodes:
                             total_episodes = len(episodes)
                             print(f"📺 총 {total_episodes}화 확인")

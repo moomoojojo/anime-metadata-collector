@@ -1,0 +1,54 @@
+{
+  "page_id": "25c670ad-b05a-80d9-8d4a-c3b04a10fc51",
+  "page_url": "https://www.notion.so/25c670adb05a80d98d4ac3b04a10fc51",
+  "is_new_page": false,
+  "updated_properties": {
+    "이름": {
+      "title": [
+        {
+          "text": {
+            "content": "위치 워치"
+          }
+        }
+      ]
+    },
+    "라프텔 제목": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "위치 워치"
+          }
+        }
+      ]
+    },
+    "방영 분기": {
+      "multi_select": [
+        {
+          "name": "2025년 2분기"
+        }
+      ]
+    },
+    "라프텔 평점": {
+      "number": 4.5
+    },
+    "라프텔 URL": {
+      "url": "https://laftel.net/item/42733"
+    },
+    "표지": {
+      "files": [
+        {
+          "name": "표지.jpg",
+          "external": {
+            "url": "https://thumbnail.laftel.net/items/thumbs/big/d547d919-eb51-4223-9e10-e1369559bf08.jpg"
+          }
+        }
+      ]
+    },
+    "총 화수": {
+      "number": 22
+    }
+  },
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:13:41.684093"
+}

@@ -1,0 +1,8 @@
+{
+  "batch_id": "2025-09-05_160338_phase4_test_batch",
+  "source_csv": "phase4_test.csv",
+  "description": "리팩토링 후 통합 테스트",
+  "total_items": 1,
+  "start_time": "2025-09-05T16:03:38.440979",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134"
+}

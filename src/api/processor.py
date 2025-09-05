@@ -63,10 +63,9 @@ class ApiAnimeProcessor:
             # 파이프라인 실행 (현재는 동기 방식)
             logger.info("파이프라인 실행 시작", title=title)
             
-            # 비동기 래핑 (향후 실제 비동기 구현을 위한 준비)
-            result = await asyncio.get_event_loop().run_in_executor(
-                None, self.pipeline.process_single_sync, title
-            )
+            # 동기 호출 (현재 모든 클라이언트가 동기식)
+            # TODO: 향후 실제 비동기 구현시 개선
+            result = self._process_sync(title)
             
             processing_time = time.time() - start_time
             result.processing_time = processing_time
@@ -112,6 +111,66 @@ class ApiAnimeProcessor:
             result.processing_time = processing_time
             return result
     
+    def _process_sync(self, title: str) -> ProcessResult:
+        """동기 방식 애니메이션 처리"""
+        try:
+            # Step 1: 라프텔 검색
+            search_result = self.pipeline.laftel.search_anime(title)
+            
+            if not search_result.success:
+                return create_error_result(
+                    title, f"Step 1 실패: {search_result.error_message}", 0
+                )
+            
+            if not search_result.candidates:
+                # 검색 실패시 빈 노션 페이지 생성
+                notion_result = self.pipeline.notion.create_or_update_page(title, None)
+                
+                result = ProcessResult(
+                    title=title,
+                    success=notion_result.success,
+                    status=ProcessStatus.PARTIAL_SUCCESS if notion_result.success else ProcessStatus.FAILED,
+                    notion_url=notion_result.page_url if notion_result.success else None,
+                    error="검색 결과가 없어 빈 페이지만 생성됨",
+                    steps_completed=1 if notion_result.success else 0
+                )
+                
+                return result
+            
+            # Step 2: AI 매칭
+            llm_result = self.pipeline.openai.find_best_match(title, search_result.candidates)
+            
+            if not llm_result.success or not llm_result.selected_title:
+                # 첫 번째 후보로 폴백
+                if search_result.candidates:
+                    llm_result.selected_title = search_result.candidates[0].title
+                    llm_result.success = True
+                else:
+                    notion_result = self.pipeline.notion.create_or_update_page(title, None)
+                    return create_error_result(title, f"Step 2 실패: {llm_result.error_message}", 1)
+            
+            # Step 3: 메타데이터 수집
+            metadata_result = self.pipeline.laftel.get_metadata(llm_result.selected_title)
+            
+            # Step 4: 노션 업로드
+            metadata_obj = metadata_result.metadata if metadata_result.success else None
+            notion_result = self.pipeline.notion.create_or_update_page(title, metadata_obj)
+            
+            if not notion_result.success:
+                return create_error_result(title, f"Step 4 실패: {notion_result.error_message}", 3)
+            
+            # 성공 결과 반환
+            return ProcessResult(
+                title=title,
+                success=True,
+                status=ProcessStatus.SUCCESS,
+                notion_url=notion_result.page_url,
+                steps_completed=4
+            )
+            
+        except Exception as e:
+            return create_error_result(title, f"처리 중 오류: {str(e)}", 0)
+
     async def _warmup_services(self):
         """서비스 워밍업 (콜드 스타트 최적화)"""
         try:

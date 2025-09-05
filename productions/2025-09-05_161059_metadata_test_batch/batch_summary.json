@@ -1,0 +1,50 @@
+{
+  "batch_id": "2025-09-05_161059_metadata_test_batch",
+  "execution_summary": {
+    "total_items": 3,
+    "success_count": 0,
+    "failed_count": 3,
+    "success_rate": "0.0%"
+  },
+  "step_statistics": {
+    "step1_success": 0,
+    "step2_success": 0,
+    "step3_success": 0,
+    "step4_success": 0
+  },
+  "failed_items": [
+    "단다단 2기",
+    "보이는 여고생",
+    "위치 워치"
+  ],
+  "processing_details": [
+    {
+      "anime_title": "단다단 2기",
+      "index": 1,
+      "start_time": "2025-09-05T16:10:59.863510",
+      "steps": {},
+      "final_status": "failed",
+      "error": "name 'create_error_result' is not defined",
+      "end_time": "2025-09-05T16:11:09.692826"
+    },
+    {
+      "anime_title": "보이는 여고생",
+      "index": 2,
+      "start_time": "2025-09-05T16:11:09.692869",
+      "steps": {},
+      "final_status": "failed",
+      "error": "name 'create_error_result' is not defined",
+      "end_time": "2025-09-05T16:11:15.906573"
+    },
+    {
+      "anime_title": "위치 워치",
+      "index": 3,
+      "start_time": "2025-09-05T16:11:15.906610",
+      "steps": {},
+      "final_status": "failed",
+      "error": "name 'create_error_result' is not defined",
+      "end_time": "2025-09-05T16:11:24.427995"
+    }
+  ],
+  "execution_time": "2025-09-05T16:11:24.428544"
+}

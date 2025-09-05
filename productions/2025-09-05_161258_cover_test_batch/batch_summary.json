@@ -1,0 +1,47 @@
+{
+  "batch_id": "2025-09-05_161258_cover_test_batch",
+  "execution_summary": {
+    "total_items": 1,
+    "success_count": 1,
+    "failed_count": 0,
+    "success_rate": "100.0%"
+  },
+  "step_statistics": {
+    "step1_success": 1,
+    "step2_success": 1,
+    "step3_success": 1,
+    "step4_success": 1
+  },
+  "failed_items": [],
+  "processing_details": [
+    {
+      "anime_title": "보이는 여고생",
+      "index": 1,
+      "start_time": "2025-09-05T16:12:58.585285",
+      "steps": {
+        "step1": {
+          "success": true,
+          "file": "productions/2025-09-05_161258_cover_test_batch/search_results/search_01_보이는 여고생.json",
+          "candidates_count": 20
+        },
+        "step2": {
+          "success": true,
+          "file": "productions/2025-09-05_161258_cover_test_batch/llm_results/llm_01_보이는 여고생.json",
+          "match_status": "match_found"
+        },
+        "step3": {
+          "success": true,
+          "file": "productions/2025-09-05_161258_cover_test_batch/metadata_results/metadata_01_보이는 여고생.json"
+        },
+        "step4": {
+          "success": true,
+          "file": "productions/2025-09-05_161258_cover_test_batch/notion_results/notion_01_보이는 여고생.json",
+          "notion_page_url": "https://www.notion.so/25c670adb05a80cf871ed0b90cbc188d"
+        }
+      },
+      "final_status": "success",
+      "end_time": "2025-09-05T16:13:07.471690"
+    }
+  ],
+  "execution_time": "2025-09-05T16:13:07.471739"
+}

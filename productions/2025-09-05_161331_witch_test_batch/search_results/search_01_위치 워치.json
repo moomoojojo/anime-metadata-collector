@@ -1,0 +1,130 @@
+{
+  "user_input": "위치 워치",
+  "search_query": "위치 워치",
+  "candidates": [
+    {
+      "title": "위치 워치",
+      "laftel_id": "42733",
+      "rank": 1,
+      "similarity_score": null
+    },
+    {
+      "title": "연맹공군 항공마법음악대 루미너스 위치스",
+      "laftel_id": "40926",
+      "rank": 2,
+      "similarity_score": null
+    },
+    {
+      "title": "마에바시 위치스",
+      "laftel_id": "42780",
+      "rank": 3,
+      "similarity_score": null
+    },
+    {
+      "title": "사일런트 위치 침묵의 마녀의 비밀",
+      "laftel_id": "42915",
+      "rank": 4,
+      "similarity_score": null
+    },
+    {
+      "title": "BURN THE WITCH #0.8",
+      "laftel_id": "41908",
+      "rank": 5,
+      "similarity_score": null
+    },
+    {
+      "title": "장난을 잘 치는 타카기 양 1기",
+      "laftel_id": "38258",
+      "rank": 6,
+      "similarity_score": null
+    },
+    {
+      "title": "좋아하는 애가 안경을 깜빡했다",
+      "laftel_id": "41531",
+      "rank": 7,
+      "similarity_score": null
+    },
+    {
+      "title": "인외씨의 신부",
+      "laftel_id": "39030",
+      "rank": 8,
+      "similarity_score": null
+    },
+    {
+      "title": "아하렌 양은 알 수가 없어",
+      "laftel_id": "40790",
+      "rank": 9,
+      "similarity_score": null
+    },
+    {
+      "title": "토모 짱은 여자아이!",
+      "laftel_id": "41220",
+      "rank": 10,
+      "similarity_score": null
+    },
+    {
+      "title": "괴롭히지 말아요, 나가토로 양",
+      "laftel_id": "40249",
+      "rank": 11,
+      "similarity_score": null
+    },
+    {
+      "title": "유우키 유우나는 용사다 -대만개의 장-",
+      "laftel_id": "40529",
+      "rank": 12,
+      "similarity_score": null
+    },
+    {
+      "title": "(자막) 유유백서 리마스터",
+      "laftel_id": "40487",
+      "rank": 13,
+      "similarity_score": null
+    },
+    {
+      "title": "리코리스 리코일",
+      "laftel_id": "40929",
+      "rank": 14,
+      "similarity_score": null
+    },
+    {
+      "title": "RWBY vol.1 - 일본어",
+      "laftel_id": "23498",
+      "rank": 15,
+      "similarity_score": null
+    },
+    {
+      "title": "RWBY vol.1 - 영어",
+      "laftel_id": "41801",
+      "rank": 16,
+      "similarity_score": null
+    },
+    {
+      "title": "단칸방의 침략자!?",
+      "laftel_id": "35541",
+      "rank": 17,
+      "similarity_score": null
+    },
+    {
+      "title": "극장판 벰 : 비컴 휴먼",
+      "laftel_id": "40959",
+      "rank": 18,
+      "similarity_score": null
+    },
+    {
+      "title": "죠죠의 기묘한 모험 시즌 2: 스타더스트 크루세이더즈",
+      "laftel_id": "24481",
+      "rank": 19,
+      "similarity_score": null
+    },
+    {
+      "title": "노라가미",
+      "laftel_id": "23650",
+      "rank": 20,
+      "similarity_score": null
+    }
+  ],
+  "total_found": 20,
+  "success": true,
+  "error_message": null,
+  "timestamp": "2025-09-05 16:13:31.833860"
+}
