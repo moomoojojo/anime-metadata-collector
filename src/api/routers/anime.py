@@ -14,6 +14,7 @@ from typing import Dict, Any
 
 from ...core.pipeline import AnimePipeline
 from ...core.models import ProcessStatus, ProcessResult
+from ...core.config import settings
 from ..schemas import (
     AnimeProcessRequest, AnimeProcessResponse, 
     SUCCESS_EXAMPLE, FAILURE_EXAMPLE, PARTIAL_SUCCESS_EXAMPLE
@@ -23,11 +24,14 @@ from ..processor import ApiAnimeProcessor
 router = APIRouter(prefix="/api/v1", tags=["anime"])
 logger = structlog.get_logger()
 
+# 서버 시작 시간 (상태 확인용)
+SERVER_START_TIME = time.time()
+
 @router.post("/process-anime", 
             response_model=AnimeProcessResponse,
             summary="애니메이션 자동 처리",
             description="애니메이션 제목을 받아서 라프텔 검색 → AI 매칭 → 메타데이터 수집 → 노션 업로드를 자동 실행")
-async def process_anime(request: AnimeProcessRequest):
+def process_anime(request: AnimeProcessRequest):
     """
     개별 애니메이션 즉시 처리 (아이폰 단축어 전용)
     """
@@ -42,8 +46,8 @@ async def process_anime(request: AnimeProcessRequest):
         # API 전용 프로세서 사용
         processor = ApiAnimeProcessor()
         
-        # 4단계 파이프라인 실행
-        result = await processor.process(request.title)
+        # 4단계 파이프라인 실행 (동기 방식)
+        result = processor.process_sync(request.title)
         
         processing_time = time.time() - start_time
         result.processing_time = processing_time
@@ -115,7 +119,7 @@ async def process_anime(request: AnimeProcessRequest):
         )
 
 @router.get("/status")
-async def api_status():
+def api_status():
     """API 서버 상태 확인"""
     try:
         # 파이프라인 상태 확인
@@ -137,7 +141,7 @@ async def api_status():
         raise HTTPException(status_code=500, detail=f"상태 확인 실패: {str(e)}")
 
 @router.get("/test-connection")
-async def test_external_connections():
+def test_external_connections():
     """외부 서비스 연결 테스트 (개발/디버깅용)"""
     if not settings.debug:
         raise HTTPException(status_code=404, detail="개발 모드에서만 사용 가능")

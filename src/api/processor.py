@@ -111,6 +111,78 @@ class ApiAnimeProcessor:
             result.processing_time = processing_time
             return result
     
+    def process_sync(self, title: str) -> ProcessResult:
+        """
+        동기 방식 애니메이션 처리 (API 전용)
+        
+        Args:
+            title: 처리할 애니메이션 제목
+            
+        Returns:
+            ProcessResult: 처리 결과
+        """
+        request_id = f"api_{int(time.time())}"
+        
+        logger.info("API 애니메이션 처리 시작 (동기)",
+                   title=title,
+                   request_id=request_id,
+                   environment=settings.environment)
+        
+        start_time = time.time()
+        
+        try:
+            # 입력 검증
+            if not title or not title.strip():
+                return create_error_result(
+                    title="",
+                    error_message="애니메이션 제목이 비어있습니다.",
+                    steps_completed=0
+                )
+            
+            title = title.strip()
+            
+            # 파이프라인 실행 (동기 방식)
+            logger.info("파이프라인 실행 시작", title=title)
+            
+            # 기존 배치와 동일한 방식으로 처리
+            result = self.pipeline.process_single_sync(title)
+            
+            processing_time = time.time() - start_time
+            result.processing_time = processing_time
+            
+            # 결과별 로깅
+            if result.success:
+                logger.info("API 애니메이션 처리 성공",
+                           title=title,
+                           matched_title=_extract_matched_title(result),
+                           notion_url=result.notion_url,
+                           processing_time=processing_time,
+                           steps_completed=result.steps_completed,
+                           request_id=request_id)
+            else:
+                logger.warning("API 애니메이션 처리 실패",
+                              title=title,
+                              error=result.error,
+                              processing_time=processing_time,
+                              steps_completed=result.steps_completed,
+                              request_id=request_id)
+            
+            return result
+            
+        except Exception as e:
+            processing_time = time.time() - start_time
+            error_msg = f"API 처리 중 예상치 못한 오류: {str(e)}"
+            
+            logger.error("API 처리 예외 발생",
+                        title=title,
+                        error=error_msg,
+                        processing_time=processing_time,
+                        request_id=request_id)
+            
+            result = create_error_result(title, error_msg, 0)
+            result.processing_time = processing_time
+            return result
+    
     def _process_sync(self, title: str) -> ProcessResult:
         """동기 방식 애니메이션 처리"""
         try:
