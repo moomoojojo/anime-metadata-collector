@@ -1,0 +1,9 @@
+{
+  "batch_id": "2025-09-05_145455_phase0_baseline_test_batch",
+  "execution_date": "2025-09-05T14:54:55.617017",
+  "source_csv": "phase0_baseline_test.csv",
+  "description": "Phase 0 베이스라인 테스트",
+  "notion_database_id": "55e733b8773a42c2b329345099c52134",
+  "openai_model": "gpt-4",
+  "total_items": 3
+}

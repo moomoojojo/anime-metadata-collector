@@ -1,0 +1,21 @@
+# API 서버 전용 의존성 파일
+# 기존 배치 처리 요구사항 포함
+-r requirements.txt
+
+# FastAPI 관련
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# CORS 및 미들웨어
+python-multipart>=0.0.6
+
+# 비동기 HTTP 클라이언트 (기존 requests 대신)
+httpx>=0.25.0
+
+# 로깅 및 모니터링
+structlog>=23.0.0
+
+# 환경변수 관리 (개선)
+python-dotenv>=1.0.0

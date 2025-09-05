@@ -1,0 +1,24 @@
+{
+  "user_input": "무직전생 ~이세계에 갔으면 최선을 다한다~ 1기",
+  "candidate_titles": [
+    "무직전생  ~이세계에 갔으면 최선을 다한다~ Part 1",
+    "무직전생 ~이세계에 갔으면 최선을 다한다~  Part 2",
+    "무직전생 II ~이세계에 갔으면 최선을 다한다~ part 2",
+    "무직전생 II ~이세계에 갔으면 최선을 다한다~ part 1",
+    "마왕학원의 부적합자 ~사상 최강의 마왕인 시조, 전생해서 자손들의 학교에 다니다~",
+    "세계 최고의 암살자, 이세계 귀족으로 전생하다",
+    "어둠의 실력자가 되고 싶어서! part 1",
+    "정령환상기",
+    "전생 귀족, 감정 스킬로 성공하다",
+    "(무삭제) 해골기사님은 지금 이세계 모험 중"
+  ],
+  "llm_timestamp": "2025-09-05T14:55:02.617199",
+  "matching_success": true,
+  "assistant_raw_response": "```json\n{\n  \"status\": \"match_found\",\n  \"selected_title\": \"무직전생  ~이세계에 갔으면 최선을 다한다~ Part 1\",\n  \"confidence\": 95,\n  \"reason\": \"제목과 시즌(1기=Part 1) 정보가 정확히 일치하며, 본편(자막/더빙 정보 없음, 일반적으로 자막판으로 간주)입니다.\"\n}\n```",
+  "thread_id": "thread_G4iH9UtK8yKFrw8E6zs20UbR",
+  "run_id": "run_hvxvN3QIWEIlPHQLqqb5eCtl",
+  "match_status": "match_found",
+  "selected_title": "무직전생  ~이세계에 갔으면 최선을 다한다~ Part 1",
+  "confidence": 95,
+  "reason": "제목과 시즌(1기=Part 1) 정보가 정확히 일치하며, 본편(자막/더빙 정보 없음, 일반적으로 자막판으로 간주)입니다."
+}
