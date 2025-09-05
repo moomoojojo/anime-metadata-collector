@@ -9,9 +9,11 @@
 import laftel
 import re
 import json
+import requests
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import time
+from urllib.parse import quote
 
 from .models import SearchResult, SearchCandidate, MetadataResult, AnimeMetadata
 from .config import settings
@@ -46,6 +48,64 @@ class LaftelClient:
         
         return user_input
     
+    def _get_laftel_headers(self) -> Dict[str, str]:
+        """라프텔 API 호출용 헤더"""
+        return {
+            'Host': 'laftel.net',
+            'laftel': 'TeJava',
+            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1_4; like Mac OS X) AppleWebKit/600.11 (KHTML, like Gecko)  Chrome/54.0.1486.383 Mobile Safari/600.8',
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate'
+        }
+    
+    def _direct_search_anime(self, query: str) -> List[Any]:
+        """직접 HTTP 요청으로 라프텔 검색 (이벤트 루프 충돌 방지)"""
+        encoded_query = quote(query)
+        url = f'https://laftel.net/api/search/v3/keyword/?keyword={encoded_query}'
+        
+        response = requests.get(url, headers=self._get_laftel_headers(), timeout=10)
+        
+        if response.status_code != 200:
+            raise Exception(f"HTTP {response.status_code}: {response.text[:200]}")
+        
+        try:
+            data = response.json()
+            # 라프텔 API 응답에서 실제 검색 결과 배열 추출
+            if isinstance(data, dict) and 'results' in data:
+                return data['results']
+            else:
+                return data
+        except json.JSONDecodeError as e:
+            raise Exception(f"JSON 파싱 실패: {e}")
+    
+    def _direct_get_anime_info(self, anime_id: int) -> Dict[str, Any]:
+        """직접 HTTP 요청으로 라프텔 애니메이션 정보 조회"""
+        url = f'https://laftel.net/api/items/v3/{anime_id}/'
+        
+        response = requests.get(url, headers=self._get_laftel_headers(), timeout=10)
+        
+        if response.status_code != 200:
+            raise Exception(f"HTTP {response.status_code}: {response.text[:200]}")
+        
+        try:
+            return response.json()
+        except json.JSONDecodeError as e:
+            raise Exception(f"JSON 파싱 실패: {e}")
+    
+    def _direct_get_episodes(self, anime_id: int) -> List[Dict[str, Any]]:
+        """직접 HTTP 요청으로 라프텔 에피소드 정보 조회"""
+        url = f'https://laftel.net/api/episodes/v2/?item={anime_id}'
+        
+        response = requests.get(url, headers=self._get_laftel_headers(), timeout=10)
+        
+        if response.status_code != 200:
+            raise Exception(f"HTTP {response.status_code}: {response.text[:200]}")
+        
+        try:
+            return response.json()
+        except json.JSONDecodeError as e:
+            raise Exception(f"JSON 파싱 실패: {e}")
+    
     def search_anime(self, user_input: str) -> SearchResult:
         """
         애니메이션 검색
@@ -68,11 +128,11 @@ class LaftelClient:
             print(f"🔍 1단계: '{search_query}' 라프텔 검색 시작")
             print("=" * 60)
             
-            # 재시도 로직 포함 검색
+            # 직접 HTTP 요청으로 라프텔 API 호출 (이벤트 루프 충돌 방지)
             search_results = None
             for attempt in range(self.retry_count):
                 try:
-                    search_results = laftel.sync.searchAnime(search_query)
+                    search_results = self._direct_search_anime(search_query)
                     break
                 except Exception as e:
                     print(f"⚠️ 검색 시도 {attempt + 1} 실패: {e}")
@@ -101,13 +161,22 @@ class LaftelClient:
             candidates = []
             for i, item in enumerate(search_results[:max_collect]):
                 try:
+                    # 직접 HTTP 응답 데이터 처리
+                    if isinstance(item, dict):
+                        title = item.get('name', '')
+                        laftel_id = str(item.get('id', ''))
+                    else:
+                        # 기존 laftel 객체 형태 (폴백)
+                        title = item.name if hasattr(item, 'name') else str(item)
+                        laftel_id = str(item.id) if hasattr(item, 'id') else None
+                    
                     candidate = SearchCandidate(
-                        title=item.name,
-                        laftel_id=str(item.id) if hasattr(item, 'id') else None,
+                        title=title,
+                        laftel_id=laftel_id,
                         rank=i + 1
                     )
                     candidates.append(candidate)
-                    print(f"📺 후보 #{i + 1}: {item.name}")
+                    print(f"📺 후보 #{i + 1}: {title}")
                     
                 except Exception as e:
                     print(f"⚠️ 후보 #{i + 1} 처리 실패: {e}")
@@ -134,19 +203,19 @@ class LaftelClient:
                 error_message=error_msg
             )
     
-    def get_anime_by_name(self, anime_name: str) -> Optional[Any]:
-        """애니메이션 이름으로 정확한 객체 찾기"""
+    def get_anime_by_name(self, anime_name: str) -> Optional[Dict[str, Any]]:
+        """애니메이션 이름으로 정확한 객체 찾기 (직접 HTTP 요청 사용)"""
         try:
-            search_results = laftel.sync.searchAnime(anime_name)
+            search_results = self._direct_search_anime(anime_name)
             
             # 정확한 매칭 찾기
             for item in search_results:
-                if item.name == anime_name:
+                if isinstance(item, dict) and item.get('name') == anime_name:
                     return item
             
             # 정확한 매칭이 없으면 첫 번째 결과 반환
-            if search_results:
-                return search_results[0]
+            if search_results and len(search_results) > 0:
+                return search_results[0] if isinstance(search_results[0], dict) else None
                 
             return None
             
@@ -178,7 +247,14 @@ class LaftelClient:
                     error_message="애니메이션을 찾을 수 없습니다."
                 )
             
-            anime_id = anime_obj.id
+            anime_id = anime_obj.get('id')
+            if not anime_id:
+                return MetadataResult(
+                    selected_title=selected_title,
+                    success=False,
+                    error_message="애니메이션 ID를 찾을 수 없습니다."
+                )
+            
             print(f"✅ 정확한 매칭 발견: ID {anime_id}")
             
             # 상세 정보 수집
@@ -187,16 +263,16 @@ class LaftelClient:
             # 재시도 로직 포함 메타데이터 수집
             for attempt in range(self.retry_count):
                 try:
-                    # 상세 정보 재조회 (laftel API 사용)
-                    info = laftel.sync.getAnimeInfo(anime_id)
+                    # 상세 정보 재조회 (직접 HTTP 요청 사용)
+                    info = self._direct_get_anime_info(anime_id)
                     
-                    name = info.name
-                    air_year_quarter = getattr(info, 'air_year_quarter', None)
-                    avg_rating = getattr(info, 'avg_rating', None)
-                    status = getattr(info, 'status', None)
+                    name = info.get('name', selected_title)
+                    air_year_quarter = info.get('air_year_quarter')
+                    avg_rating = info.get('avg_rating')
+                    status = info.get('status')
                     laftel_url = f"https://laftel.net/item/{anime_id}"
-                    cover_url = getattr(info, 'image', None)  # 수정: img → image
-                    production = getattr(info, 'production', None)
+                    cover_url = info.get('image')  # 이미지 URL
+                    production = info.get('production')
                     
                     print(f"✅ 기본 정보 수집 완료: {name}")
                     
@@ -204,7 +280,7 @@ class LaftelClient:
                     total_episodes = None
                     try:
                         print(f"🎬 에피소드 정보 조회 중...")
-                        episodes = laftel.sync.searchEpisodes(anime_id)
+                        episodes = self._direct_get_episodes(anime_id)
                         if episodes:
                             total_episodes = len(episodes)
                             print(f"📺 총 {total_episodes}화 확인")
