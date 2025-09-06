@@ -14,9 +14,17 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import time
 from urllib.parse import quote
+import os
 
 from .models import SearchResult, SearchCandidate, MetadataResult, AnimeMetadata
 from .config import settings
+
+# 렌더 환경에서는 CloudScraper 사용
+try:
+    from cloudscraper import create_scraper
+    CLOUDSCRAPER_AVAILABLE = True
+except ImportError:
+    CLOUDSCRAPER_AVAILABLE = False
 
 class LaftelClient:
     """라프텔 API 클라이언트"""
@@ -26,6 +34,15 @@ class LaftelClient:
         self.max_candidates = settings.max_search_candidates
         self.retry_count = 3
         self.retry_delay = 1.0  # 초
+        
+        # 렌더 환경 감지 및 HTTP 클라이언트 설정
+        self.is_render_env = os.getenv('RENDER', '').lower() == 'true'
+        if self.is_render_env and CLOUDSCRAPER_AVAILABLE:
+            self.http_client = create_scraper()
+            print("🌐 렌더 환경 감지: CloudScraper 사용")
+        else:
+            self.http_client = requests
+            print("🏠 로컬 환경: requests 사용")
     
     def optimize_search_term(self, user_input: str) -> str:
         """라프텔 검색 최적화를 위한 검색어 전처리"""
@@ -61,9 +78,18 @@ class LaftelClient:
     def _direct_search_anime(self, query: str) -> List[Any]:
         """직접 HTTP 요청으로 라프텔 검색 (이벤트 루프 충돌 방지)"""
         encoded_query = quote(query)
-        url = f'https://laftel.net/api/search/v3/keyword/?keyword={encoded_query}'
         
-        response = requests.get(url, headers=self._get_laftel_headers(), timeout=10)
+        # 렌더 환경에서는 NCP 프록시 사용
+        if self.is_render_env:
+            # NCP 프록시를 통한 라프텔 API 호출
+            proxy_url = f'http://49.50.135.81/laftel/api/search/v3/keyword/?keyword={encoded_query}'
+            print(f"🌐 NCP 프록시를 통한 라프텔 검색: {proxy_url}")
+        else:
+            # 로컬에서는 직접 호출
+            proxy_url = f'https://laftel.net/api/search/v3/keyword/?keyword={encoded_query}'
+            print(f"🏠 직접 라프텔 검색: {proxy_url}")
+        
+        response = requests.get(proxy_url, headers=self._get_laftel_headers(), timeout=10)
         
         if response.status_code != 200:
             raise Exception(f"HTTP {response.status_code}: {response.text[:200]}")
@@ -80,7 +106,13 @@ class LaftelClient:
     
     def _direct_get_anime_info(self, anime_id: int) -> Dict[str, Any]:
         """직접 HTTP 요청으로 라프텔 애니메이션 정보 조회"""
-        url = f'https://laftel.net/api/items/v3/{anime_id}/'
+        # 렌더 환경에서는 NCP 프록시 사용
+        if self.is_render_env:
+            url = f'http://49.50.135.81/laftel/api/items/v3/{anime_id}/'
+            print(f"🌐 NCP 프록시를 통한 애니메이션 정보 조회: {url}")
+        else:
+            url = f'https://laftel.net/api/items/v3/{anime_id}/'
+            print(f"🏠 직접 애니메이션 정보 조회: {url}")
         
         response = requests.get(url, headers=self._get_laftel_headers(), timeout=10)
         
@@ -94,7 +126,13 @@ class LaftelClient:
     
     def _direct_get_episodes(self, anime_id: int) -> List[Dict[str, Any]]:
         """직접 HTTP 요청으로 라프텔 에피소드 정보 조회"""
-        url = f'https://laftel.net/api/episodes/v2/?item={anime_id}'
+        # 렌더 환경에서는 NCP 프록시 사용
+        if self.is_render_env:
+            url = f'http://49.50.135.81/laftel/api/episodes/v2/?item={anime_id}'
+            print(f"🌐 NCP 프록시를 통한 에피소드 정보 조회: {url}")
+        else:
+            url = f'https://laftel.net/api/episodes/v2/?item={anime_id}'
+            print(f"🏠 직접 에피소드 정보 조회: {url}")
         
         response = requests.get(url, headers=self._get_laftel_headers(), timeout=10)
         
