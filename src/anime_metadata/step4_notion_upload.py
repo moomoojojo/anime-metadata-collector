@@ -63,8 +63,8 @@ def create_notion_page_properties(metadata: Dict[str, Any], user_input: str, is_
     
     # 방영 분기 (Multi-select)
     if "방영 분기" in field_mapping and metadata and "air_year_quarter" in metadata and metadata["air_year_quarter"]:
-        # "|"로 구분된 여러 분기를 분리하여 다중 선택으로 처리
-        quarters = metadata["air_year_quarter"].split("|")
+        # 쉼표로 구분된 여러 분기를 분리하여 다중 선택으로 처리
+        quarters = metadata["air_year_quarter"].split(",")
         properties["방영 분기"] = {
             "multi_select": [{"name": quarter.strip()} for quarter in quarters if quarter.strip()]
         }

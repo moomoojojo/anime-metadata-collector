@@ -106,10 +106,12 @@ class NotionClient:
                     "rich_text": [{"text": {"content": metadata.name}}]
                 }
             
-            # 방영 분기
+            # 방영 분기 (Multi-select)
             if metadata.air_year_quarter:
+                # 쉼표로 구분된 여러 분기를 분리하여 다중 선택으로 처리
+                quarters = metadata.air_year_quarter.split(",")
                 properties["방영 분기"] = {
-                    "multi_select": [{"name": metadata.air_year_quarter}]
+                    "multi_select": [{"name": quarter.strip()} for quarter in quarters if quarter.strip()]
                 }
             
             # 라프텔 평점
