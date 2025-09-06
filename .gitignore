@@ -51,3 +51,22 @@ htmlcov/
 # 배치 실행 결과
 batch_results/
 *.result.json
+
+# SSH 키 및 보안 파일
+*.pem
+*.key
+*.crt
+*.p12
+
+# 압축 파일
+*.tgz
+*.tar.gz
+*.zip
+
+# 테스트 파일
+*_test.csv
+*_test.json
+*_debug.*
+
+# SSH 설정
+~/
